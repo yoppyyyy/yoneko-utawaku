@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎤 Utawaku Archive — 歌枠アーカイブ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   CSS CUSTOM PROPERTIES — 確定パレット
+   ============================================================ */
+:root {
+  --primary-900: #2a1f3d;
+  --primary-700: #4f3560;
+  --primary-500: #7b52a0;
+  --primary-300: #a87ecc;
+  --primary-100: #d4b8e8;
+
+  --accent-700: #3d4f7a;
+  --accent-500: #6a7ab2;
+  --accent-300: #95a8d4;
+
+  --gold-500: #d4a853;
+  --gold-300: #ebd2a8;
+  --gold-100: #f5e6cc;
+
+  --neutral-950: #0a0a12;
+  --neutral-900: #14121e;
+  --neutral-800: #1e1a2e;
+  --neutral-600: #3a3450;
+  --neutral-100: #e8e0f0;
+
+  --font-display: 'Cinzel', serif;
+  --font-body: 'Zen Kaku Gothic New', sans-serif;
+  --font-accent: 'Cormorant Garamond', serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--neutral-950);
+  color: var(--neutral-100);
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   BACKGROUND TEXTURE — ゴシックダマスク風パターン
+   ============================================================ */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 600px 400px at 20% 20%, rgba(123,82,160,0.08), transparent),
+    radial-gradient(ellipse 500px 500px at 80% 70%, rgba(61,79,122,0.06), transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L35 15 L30 25 L25 15 Z' fill='rgba(168,126,204,0.025)'/%3E%3Cpath d='M30 35 L35 45 L30 55 L25 45 Z' fill='rgba(168,126,204,0.02)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+header {
+  padding: 40px 0 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.site-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: linear-gradient(135deg, var(--gold-300), var(--gold-500), var(--gold-300));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  margin-bottom: 4px;
+}
+
+.site-subtitle {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--primary-300);
+  letter-spacing: 0.15em;
+  opacity: 0.8;
+}
+
+.site-meta {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--neutral-600);
+}
+
+/* ============================================================
+   NAVIGATION TABS
+   ============================================================ */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin: 24px auto 0;
+  max-width: 500px;
+  background: var(--neutral-900);
+  border-radius: var(--radius-lg);
+  padding: 4px;
+  border: 1px solid var(--neutral-600);
+}
+
+.nav-tab {
+  flex: 1;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  color: var(--neutral-100);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.nav-tab:hover { opacity: 0.85; }
+
+.nav-tab.active {
+  background: var(--primary-700);
+  opacity: 1;
+  box-shadow: 0 2px 12px rgba(123,82,160,0.3);
+}
+
+/* ============================================================
+   SEARCH BAR
+   ============================================================ */
+.search-section {
+  margin: 28px auto;
+  max-width: 600px;
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 20px 14px 48px;
+  background: var(--neutral-900);
+  border: 1px solid var(--neutral-600);
+  border-radius: var(--radius-lg);
+  color: var(--neutral-100);
+  font-family: var(--font-body);
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: var(--neutral-600);
+  font-style: italic;
+}
+
+.search-input:focus {
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px rgba(123,82,160,0.15), 0 4px 20px rgba(123,82,160,0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-300);
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.search-results-count {
+  text-align: right;
+  font-size: 12px;
+  color: var(--neutral-600);
+  margin-top: 8px;
+  padding-right: 4px;
+}
+
+/* ============================================================
+   TAB CONTENT
+   ============================================================ */
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* ============================================================
+   STREAM CARDS — 歌枠一覧
+   ============================================================ */
+.streams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.stream-card {
+  background: var(--neutral-900);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--neutral-600);
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.stream-card:nth-child(2) { animation-delay: 0.08s; }
+.stream-card:nth-child(3) { animation-delay: 0.16s; }
+.stream-card:nth-child(4) { animation-delay: 0.24s; }
+
+.stream-card:hover {
+  border-color: var(--primary-500);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(123,82,160,0.15), 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.stream-thumbnail {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+
+.stream-thumbnail-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.stream-thumbnail-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(transparent, var(--neutral-900));
+}
+
+.stream-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(10,10,18,0.75);
+  backdrop-filter: blur(8px);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  color: var(--gold-300);
+  border: 1px solid rgba(212,168,83,0.2);
+  z-index: 2;
+}
+
+.stream-info {
+  padding: 16px 18px 18px;
+}
+
+.stream-date {
+  font-family: var(--font-accent);
+  font-size: 13px;
+  color: var(--accent-300);
+  letter-spacing: 0.05em;
+}
+
+.stream-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 4px;
+  color: var(--gold-100);
+  line-height: 1.5;
+}
+
+.stream-song-count {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--primary-300);
+}
+
+.stream-song-count::before {
+  content: '♪';
+  font-size: 14px;
+}
+
+/* ============================================================
+   SETLIST — セットリスト展開
+   ============================================================ */
+.setlist {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.stream-card.expanded .setlist {
+  max-height: 2000px;
+}
+
+.setlist-inner {
+  padding: 0 18px 18px;
+  border-top: 1px solid var(--neutral-600);
+  margin-top: 0;
+  padding-top: 14px;
+}
+
+.setlist-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(58,52,80,0.4);
+  transition: background 0.2s;
+}
+
+.setlist-item:last-child { border-bottom: none; }
+
+.setlist-item:hover {
+  background: rgba(123,82,160,0.06);
+  margin: 0 -8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 6px;
+}
+
+.setlist-no {
+  font-family: var(--font-accent);
+  font-size: 14px;
+  color: var(--neutral-600);
+  min-width: 24px;
+  text-align: right;
+}
+
+.setlist-song {
+  flex: 1;
+  min-width: 0;
+}
+
+.setlist-song-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--neutral-100);
+}
+
+.setlist-artist {
+  font-size: 12px;
+  color: var(--primary-300);
+  opacity: 0.7;
+}
+
+.setlist-time {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: var(--accent-300);
+  white-space: nowrap;
+}
+
+.play-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: var(--gold-500);
+  color: var(--neutral-950);
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(212,168,83,0.25);
+}
+
+.play-btn:hover {
+  background: var(--gold-300);
+  transform: scale(1.12);
+  box-shadow: 0 4px 16px rgba(212,168,83,0.4);
+}
+
+/* ============================================================
+   SONGS TABLE — 楽曲一覧
+   ============================================================ */
+.songs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.songs-header h2 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--gold-300);
+  letter-spacing: 0.05em;
+}
+
+.sort-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.sort-btn {
+  padding: 6px 14px;
+  background: var(--neutral-900);
+  border: 1px solid var(--neutral-600);
+  border-radius: 20px;
+  color: var(--neutral-100);
+  font-family: var(--font-body);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  opacity: 0.6;
+}
+
+.sort-btn:hover { opacity: 0.85; }
+
+.sort-btn.active {
+  background: var(--primary-700);
+  border-color: var(--primary-500);
+  opacity: 1;
+}
+
+.songs-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 4px;
+}
+
+.songs-table thead th {
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--neutral-600);
+  padding: 8px 12px;
+  font-weight: 500;
+}
+
+.songs-table tbody tr {
+  background: var(--neutral-900);
+  transition: all 0.2s;
+  cursor: pointer;
+  animation: fadeInUp 0.4s ease both;
+}
+
+.songs-table tbody tr:nth-child(2) { animation-delay: 0.03s; }
+.songs-table tbody tr:nth-child(3) { animation-delay: 0.06s; }
+.songs-table tbody tr:nth-child(4) { animation-delay: 0.09s; }
+.songs-table tbody tr:nth-child(5) { animation-delay: 0.12s; }
+
+.songs-table tbody tr:hover {
+  background: rgba(79,53,96,0.3);
+}
+
+.songs-table td {
+  padding: 12px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.songs-table td:first-child {
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  border-left: 1px solid transparent;
+}
+
+.songs-table td:last-child {
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  border-right: 1px solid transparent;
+}
+
+.songs-table tbody tr:hover td {
+  border-color: var(--neutral-600);
+}
+
+.song-name {
+  font-weight: 500;
+  color: var(--neutral-100);
+  font-size: 14px;
+}
+
+.song-artist-cell {
+  color: var(--primary-300);
+  font-size: 13px;
+}
+
+.song-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(123,82,160,0.15);
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: var(--primary-100);
+  white-space: nowrap;
+}
+
+.song-last-date {
+  font-family: var(--font-accent);
+  font-size: 13px;
+  color: var(--accent-300);
+  white-space: nowrap;
+}
+
+/* ============================================================
+   SONG DETAIL MODAL
+   ============================================================ */
+.song-appearances {
+  margin-top: 12px;
+  padding: 14px;
+  background: var(--neutral-800);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--neutral-600);
+}
+
+.song-appearances h4 {
+  font-size: 13px;
+  color: var(--gold-300);
+  margin-bottom: 10px;
+}
+
+.appearance-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(58,52,80,0.3);
+}
+
+.appearance-item:last-child { border-bottom: none; }
+
+.appearance-date {
+  font-family: var(--font-accent);
+  font-size: 13px;
+  color: var(--accent-300);
+  min-width: 90px;
+}
+
+.appearance-stream {
+  flex: 1;
+  font-size: 13px;
+  color: var(--neutral-100);
+  opacity: 0.8;
+}
+
+.appearance-time {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: var(--primary-300);
+}
+
+/* ============================================================
+   STATS BAR
+   ============================================================ */
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 24px 0 8px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--gold-500);
+}
+
+.stat-label {
+  font-size: 11px;
+  color: var(--neutral-600);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 2px;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  margin-top: 60px;
+  padding: 24px 0;
+  text-align: center;
+  border-top: 1px solid var(--neutral-600);
+  position: relative;
+  z-index: 1;
+}
+
+.footer-text {
+  font-size: 12px;
+  color: var(--neutral-600);
+  font-family: var(--font-accent);
+  font-style: italic;
+}
+
+.footer-text a {
+  color: var(--primary-300);
+  text-decoration: none;
+}
+
+.footer-note {
+  font-size: 11px;
+  color: var(--neutral-600);
+  opacity: 0.6;
+  margin-top: 6px;
+}
+
+/* ============================================================
+   DECORATIVE ELEMENTS
+   ============================================================ */
+.gothic-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+  color: var(--neutral-600);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+}
+
+.gothic-divider::before,
+.gothic-divider::after {
+  content: '';
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--neutral-600), transparent);
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 640px) {
+  .streams-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .songs-table thead { display: none; }
+
+  .songs-table tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px;
+    gap: 4px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 4px;
+  }
+
+  .songs-table td {
+    padding: 0;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
+  .songs-table td:nth-child(1) {
+    width: 100%;
+  }
+
+  .songs-table td:nth-child(2) {
+    width: 100%;
+  }
+
+  .songs-table td:nth-child(3),
+  .songs-table td:nth-child(4) {
+    width: auto;
+  }
+
+  .stats-bar { gap: 20px; }
+  .stat-number { font-size: 22px; }
+
+  .nav-tabs {
+    max-width: 100%;
+  }
+
+  .sort-controls {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ==================== HEADER ==================== -->
+  <header>
+    <div class="site-title">Utawaku Archive</div>
+    <div class="site-subtitle">— Setlist Database —</div>
+    <div class="site-meta">非公式ファンサイト</div>
+  </header>
+
+  <!-- ==================== STATS ==================== -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-number">24</div>
+      <div class="stat-label">Streams</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">387</div>
+      <div class="stat-label">Songs</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">198</div>
+      <div class="stat-label">Unique</div>
+    </div>
+  </div>
+
+  <div class="gothic-divider">✦</div>
+
+  <!-- ==================== SEARCH ==================== -->
+  <div class="search-section">
+    <div class="search-wrapper">
+      <span class="search-icon">🔍</span>
+      <input type="text" class="search-input" id="searchInput"
+             placeholder="曲名・アーティスト名で検索...">
+    </div>
+    <div class="search-results-count" id="searchCount"></div>
+  </div>
+
+  <!-- ==================== TABS ==================== -->
+  <nav class="nav-tabs">
+    <button class="nav-tab active" data-tab="streams">🎤 歌枠一覧</button>
+    <button class="nav-tab" data-tab="songs">♪ 楽曲一覧</button>
+  </nav>
+
+  <!-- ==================== STREAMS TAB ==================== -->
+  <div class="tab-content active" id="tab-streams">
+    <div class="streams-grid" id="streamsGrid">
+
+      <!-- Card 1 -->
+      <div class="stream-card" onclick="toggleSetlist(this)">
+        <div class="stream-thumbnail-wrapper">
+          <img class="stream-thumbnail" src="https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg" alt=""
+               onerror="this.style.background='linear-gradient(135deg, var(--primary-900), var(--accent-700))'; this.style.height='180px';">
+          <span class="stream-badge">63曲</span>
+        </div>
+        <div class="stream-info">
+          <div class="stream-date">2026.04.10</div>
+          <div class="stream-title">【歌枠】12時間耐久！春のアニソン祭り🌸</div>
+          <div class="stream-song-count">63曲 — 12:05:30</div>
+        </div>
+        <div class="setlist">
+          <div class="setlist-inner">
+            <div class="setlist-item">
+              <span class="setlist-no">1</span>
+              <div class="setlist-song">
+                <div class="setlist-song-title">桜</div>
+                <div class="setlist-artist">コブクロ</div>
+              </div>
+              <span class="setlist-time">0:12:45</span>
+              <button class="play-btn" title="この曲から再生">▶</button>
+            </div>
+            <div class="setlist-item">
+              <span class="setlist-no">2</span>
+              <div class="setlist-song">
+                <div class="setlist-song-title">CHE.R.RY</div>
+                <div class="setlist-artist">YUI</div>
+              </div>
+              <span class="setlist-time">0:23:36</span>
+              <button class="play-btn" title="この曲から再生">▶</button>
+            </div>
+            <div class="setlist-item">
+              <span class="setlist-no">3</span>
+              <div class="setlist-song">
+                <div class="setlist-song-title">SAKURAドロップス</div>
+                <div class="setlist-artist"></div>
+              </div>
+              <span class="setlist-time">0:32:32</span>
+              <button class="play-btn" title="この曲から再生">▶</button>
+            </div>
+            <div class="setlist-item">
+              <span class="setlist-no">4</span>
+              <div class="setlist-song">
+                <div class="setlist-song-title">千本桜</div>
+                <div class="setlist-artist">和楽器バンド</div>
+              </div>
+              <span class="setlist-time">0:42:33</span>
+              <button class="play-btn" title="この曲から再生">▶</button>
+            </div>
+            <div class="setlist-item">
+              <span class="setlist-no">5</span>
+              <div class="setlist-song">
+                <div class="setlist-song-title">紅蓮華 (FULL ver.)</div>
+                <div class="setlist-artist">LiSA</div>
+              </div>
+              <span class="setlist-time">5:37:00</span>
+              <button class="play-btn" title="この曲から再生">▶</button>
+            </div>
+            <div class="setlist-item" style="justify-content:center; padding:12px 0 4px; border:none;">
+              <span style="font-size:12px; color:var(--neutral-600); font-style:italic;">… 他 58 曲</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="stream-card" onclick="toggleSetlist(this)">
+        <div class="stream-thumbnail-wrapper">
+          <div class="stream-thumbnail" style="background:linear-gradient(135deg, var(--primary-900), var(--accent-700)); height:180px; display:flex; align-items:center; justify-content:center;">
+            <span style="font-size:48px; opacity:0.3;">🎤</span>
+          </div>
+          <span class="stream-badge">28曲</span>
+        </div>
+        <div class="stream-info">
+          <div class="stream-date">2026.03.28</div>
+          <div class="stream-title">【歌枠】深夜のしっとり歌枠🌙</div>
+          <div class="stream-song-count">28曲 — 3:42:15</div>
+        </div>
+        <div class="setlist">
+          <div class="setlist-inner">
+            <div class="setlist-item">
+              <span class="setlist-no">1</span>
+              <div class="setlist-song">
+                <div class="setlist-song-title">残酷な天使のテーゼ</div>
+                <div class="setlist-artist">高橋洋子</div>
+              </div>
+              <span class="setlist-time">0:08:22</span>
+              <button class="play-btn" title="この曲から再生">▶</button>
+            </div>
+            <div class="setlist-item">
+              <span class="setlist-no">2</span>
+              <div class="setlist-song">
+                <div class="setlist-song-title">unravel</div>
+                <div class="setlist-artist">TK from 凛として時雨</div>
+              </div>
+              <span class="setlist-time">0:14:50</span>
+              <button class="play-btn" title="この曲から再生">▶</button>
+            </div>
+            <div class="setlist-item" style="justify-content:center; padding:12px 0 4px; border:none;">
+              <span style="font-size:12px; color:var(--neutral-600); font-style:italic;">… 他 26 曲</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="stream-card" onclick="toggleSetlist(this)">
+        <div class="stream-thumbnail-wrapper">
+          <div class="stream-thumbnail" style="background:linear-gradient(135deg, var(--accent-700), var(--primary-700)); height:180px; display:flex; align-items:center; justify-content:center;">
+            <span style="font-size:48px; opacity:0.3;">🎤</span>
+          </div>
+          <span class="stream-badge">35曲</span>
+        </div>
+        <div class="stream-info">
+          <div class="stream-date">2026.03.14</div>
+          <div class="stream-title">【歌枠】ホワイトデー記念！リクエスト歌枠💝</div>
+          <div class="stream-song-count">35曲 — 4:18:40</div>
+        </div>
+        <div class="setlist">
+          <div class="setlist-inner">
+            <div class="setlist-item">
+              <span class="setlist-no">1</span>
+              <div class="setlist-song">
+                <div class="setlist-song-title">Love so sweet</div>
+                <div class="setlist-artist">嵐</div>
+              </div>
+              <span class="setlist-time">0:05:10</span>
+              <button class="play-btn" title="この曲から再生">▶</button>
+            </div>
+            <div class="setlist-item" style="justify-content:center; padding:12px 0 4px; border:none;">
+              <span style="font-size:12px; color:var(--neutral-600); font-style:italic;">… 他 34 曲</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="stream-card" onclick="toggleSetlist(this)">
+        <div class="stream-thumbnail-wrapper">
+          <div class="stream-thumbnail" style="background:linear-gradient(135deg, var(--primary-700), var(--neutral-800)); height:180px; display:flex; align-items:center; justify-content:center;">
+            <span style="font-size:48px; opacity:0.3;">🎤</span>
+          </div>
+          <span class="stream-badge">42曲</span>
+        </div>
+        <div class="stream-info">
+          <div class="stream-date">2026.02.22</div>
+          <div class="stream-title">【歌枠】猫の日スペシャル！8時間歌枠🐱</div>
+          <div class="stream-song-count">42曲 — 8:12:05</div>
+        </div>
+        <div class="setlist">
+          <div class="setlist-inner">
+            <div class="setlist-item">
+              <span class="setlist-no">1</span>
+              <div class="setlist-song">
+                <div class="setlist-song-title">Butter-Fly</div>
+                <div class="setlist-artist">和田光司</div>
+              </div>
+              <span class="setlist-time">0:10:33</span>
+              <button class="play-btn" title="この曲から再生">▶</button>
+            </div>
+            <div class="setlist-item" style="justify-content:center; padding:12px 0 4px; border:none;">
+              <span style="font-size:12px; color:var(--neutral-600); font-style:italic;">… 他 41 曲</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== SONGS TAB ==================== -->
+  <div class="tab-content" id="tab-songs">
+
+    <div class="songs-header">
+      <h2>All Songs</h2>
+      <div class="sort-controls">
+        <button class="sort-btn active" data-sort="name">曲名順</button>
+        <button class="sort-btn" data-sort="count">歌唱回数</button>
+        <button class="sort-btn" data-sort="date">最新順</button>
+      </div>
+    </div>
+
+    <table class="songs-table" id="songsTable">
+      <thead>
+        <tr>
+          <th>曲名</th>
+          <th>アーティスト</th>
+          <th>歌唱回数</th>
+          <th>最新</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr onclick="this.querySelector('.song-appearances')?.classList.toggle('hidden') ?? null">
+          <td><span class="song-name">残酷な天使のテーゼ</span></td>
+          <td><span class="song-artist-cell">高橋洋子</span></td>
+          <td><span class="song-count">♪ 5回</span></td>
+          <td><span class="song-last-date">2026.03.28</span></td>
+        </tr>
+        <tr>
+          <td><span class="song-name">紅蓮華</span></td>
+          <td><span class="song-artist-cell">LiSA</span></td>
+          <td><span class="song-count">♪ 4回</span></td>
+          <td><span class="song-last-date">2026.04.10</span></td>
+        </tr>
+        <tr>
+          <td><span class="song-name">桜</span></td>
+          <td><span class="song-artist-cell">コブクロ</span></td>
+          <td><span class="song-count">♪ 3回</span></td>
+          <td><span class="song-last-date">2026.04.10</span></td>
+        </tr>
+        <tr>
+          <td><span class="song-name">千本桜</span></td>
+          <td><span class="song-artist-cell">和楽器バンド</span></td>
+          <td><span class="song-count">♪ 3回</span></td>
+          <td><span class="song-last-date">2026.04.10</span></td>
+        </tr>
+        <tr>
+          <td><span class="song-name">God knows...</span></td>
+          <td><span class="song-artist-cell">涼宮ハルヒ</span></td>
+          <td><span class="song-count">♪ 3回</span></td>
+          <td><span class="song-last-date">2026.04.10</span></td>
+        </tr>
+        <tr>
+          <td><span class="song-name">unravel</span></td>
+          <td><span class="song-artist-cell">TK from 凛として時雨</span></td>
+          <td><span class="song-count">♪ 2回</span></td>
+          <td><span class="song-last-date">2026.04.10</span></td>
+        </tr>
+        <tr>
+          <td><span class="song-name">Butter-Fly</span></td>
+          <td><span class="song-artist-cell">和田光司</span></td>
+          <td><span class="song-count">♪ 2回</span></td>
+          <td><span class="song-last-date">2026.04.10</span></td>
+        </tr>
+        <tr>
+          <td><span class="song-name">炎</span></td>
+          <td><span class="song-artist-cell">LiSA</span></td>
+          <td><span class="song-count">♪ 2回</span></td>
+          <td><span class="song-last-date">2026.04.10</span></td>
+        </tr>
+        <tr>
+          <td><span class="song-name">CHE.R.RY</span></td>
+          <td><span class="song-artist-cell">YUI</span></td>
+          <td><span class="song-count">♪ 1回</span></td>
+          <td><span class="song-last-date">2026.04.10</span></td>
+        </tr>
+        <tr>
+          <td><span class="song-name">Love so sweet</span></td>
+          <td><span class="song-artist-cell">嵐</span></td>
+          <td><span class="song-count">♪ 1回</span></td>
+          <td><span class="song-last-date">2026.03.14</span></td>
+        </tr>
+        <tr>
+          <td><span class="song-name">そばかす</span></td>
+          <td><span class="song-artist-cell">JUDY AND MARY</span></td>
+          <td><span class="song-count">♪ 1回</span></td>
+          <td><span class="song-last-date">2026.04.10</span></td>
+        </tr>
+        <tr>
+          <td><span class="song-name">新時代</span></td>
+          <td><span class="song-artist-cell">Ado</span></td>
+          <td><span class="song-count">♪ 1回</span></td>
+          <td><span class="song-last-date">2026.04.10</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="footer-text">Utawaku Archive — Unofficial Fan Project</div>
+    <div class="footer-note">This is an unofficial fan site. All stream content belongs to its respective creator.</div>
+  </footer>
+
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT — インタラクション
+     ============================================================ -->
+<script>
+// Tab switching
+document.querySelectorAll('.nav-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+  });
+});
+
+// Setlist toggle
+function toggleSetlist(card) {
+  // Don't toggle if clicking play button
+  if (event.target.closest('.play-btn')) return;
+  card.classList.toggle('expanded');
+}
+
+// Play button
+document.querySelectorAll('.play-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    // In production: window.open(youtubeUrl + '?t=' + seconds)
+    const songTitle = btn.closest('.setlist-item').querySelector('.setlist-song-title').textContent;
+    btn.textContent = '⏸';
+    btn.style.background = 'var(--primary-500)';
+    setTimeout(() => {
+      btn.textContent = '▶';
+      btn.style.background = '';
+    }, 1500);
+  });
+});
+
+// Search
+const searchInput = document.getElementById('searchInput');
+const searchCount = document.getElementById('searchCount');
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase().trim();
+  const activeTab = document.querySelector('.nav-tab.active').dataset.tab;
+
+  if (activeTab === 'streams') {
+    const items = document.querySelectorAll('.setlist-item');
+    let count = 0;
+    items.forEach(item => {
+      const title = item.querySelector('.setlist-song-title');
+      const artist = item.querySelector('.setlist-artist');
+      if (!title) return;
+      const match = !query ||
+        title.textContent.toLowerCase().includes(query) ||
+        (artist && artist.textContent.toLowerCase().includes(query));
+      item.style.display = match ? '' : 'none';
+      if (match && title) count++;
+    });
+    searchCount.textContent = query ? `${count} 件ヒット` : '';
+  } else {
+    const rows = document.querySelectorAll('.songs-table tbody tr');
+    let count = 0;
+    rows.forEach(row => {
+      const name = row.querySelector('.song-name');
+      const artist = row.querySelector('.song-artist-cell');
+      const match = !query ||
+        (name && name.textContent.toLowerCase().includes(query)) ||
+        (artist && artist.textContent.toLowerCase().includes(query));
+      row.style.display = match ? '' : 'none';
+      if (match) count++;
+    });
+    searchCount.textContent = query ? `${count} 件ヒット` : '';
+  }
+});
+
+// Sort buttons
+document.querySelectorAll('.sort-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    // In production: sort logic here
+  });
+});
+</script>
+
+</body>
+</html>

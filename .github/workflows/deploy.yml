@@ -1,0 +1,42 @@
+name: Fetch data & Deploy to GitHub Pages
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # 毎時
+  workflow_dispatch:       # 手動トリガー
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Fetch data from Google Sheets
+        run: node scripts/fetch-sheets.js
+        env:
+          SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+
+      - name: Prepare deploy directory
+        run: |
+          mkdir -p deploy
+          cp -r site/* deploy/
+          cp -r data deploy/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./deploy

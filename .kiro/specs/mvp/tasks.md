@@ -1,0 +1,129 @@
+# Tasks: MVP — VTuber歌枠ファンサイト
+
+## Wave 1 — 基盤（並列実行可能）
+
+### Task 1: プロジェクト初期化
+- **ID**: T-1
+- **Priority**: P0
+- **Depends on**: なし
+- **Files**: `package.json`, `.gitignore`, `.github/workflows/deploy.yml`
+- **Acceptance Criteria**:
+  - [x] `git init` でリポジトリ初期化
+  - [x] `package.json` 作成（name, scripts, dependencies: googleapis）
+  - [x] `.gitignore` に `node_modules/`, `data/` を記載
+  - [x] ディレクトリ構造を作成（`site/`, `site/css/`, `site/js/`, `scripts/`）
+
+### Task 2: HTMLシェル作成
+- **ID**: T-2
+- **Priority**: P0
+- **Depends on**: なし
+- **Files**: `site/index.html`
+- **Acceptance Criteria**:
+  - [x] mockup.htmlの構造を元に `site/index.html` を作成
+  - [x] Header（C-1）、Stats Bar（C-2）、Search Bar（C-3）、Nav Tabs（C-4）、Tab Content領域、Footer（C-8）の骨格を配置
+  - [x] Tab Content内は空コンテナ（JSで動的生成するため）
+  - [x] Google Fonts CDN読み込み（Cinzel, Zen Kaku Gothic New, Cormorant Garamond）
+  - [x] `css/style.css` と `js/app.js` をリンク
+
+### Task 3: CSS作成
+- **ID**: T-3
+- **Priority**: P0
+- **Depends on**: なし
+- **Files**: `site/css/style.css`
+- **Acceptance Criteria**:
+  - [x] mockup.htmlから全CSSを抽出して `site/css/style.css` に配置
+  - [x] CSSカスタムプロパティ（カラーパレット、フォント、radius）を `:root` に定義
+  - [x] レスポンシブ対応（640px breakpoint）を含む
+  - [x] アニメーション（fadeInUp）を含む
+
+## Wave 2 — データ層
+
+### Task 4: データ取得スクリプト作成
+- **ID**: T-4
+- **Priority**: P0
+- **Depends on**: T-1
+- **Files**: `scripts/fetch-sheets.js`
+- **Acceptance Criteria**:
+  - [x] Google Sheets APIでスプレッドシートからデータ取得
+  - [x] `streams` シートを `data/streams.json` に変換・書き出し
+  - [x] `setlists` シートを `data/setlists.json` に変換・書き出し
+  - [x] `youtube_url` から `video_id` を抽出して streams.json に付与
+  - [x] 環境変数 `GOOGLE_API_KEY`, `SPREADSHEET_ID` で認証情報を受け取る（`.env` + dotenv対応）
+  - [x] `data/` ディレクトリがなければ自動作成
+
+### Task 5: サンプルJSONデータ作成
+- **ID**: T-5
+- **Priority**: P0
+- **Depends on**: なし
+- **Files**: `data/streams.json`, `data/setlists.json`
+- **Acceptance Criteria**:
+  - [x] スプレッドシートから実データを取得（2配信・5曲）
+  - [x] streams.json: design.mdのJSON Schemaに準拠
+  - [x] setlists.json: design.mdのJSON Schemaに準拠
+  - [ ] 同じ曲が複数配信に登場するデータを含む（FR-1.3検証用）— データ追加時に対応
+
+## Wave 3 — フロントエンドロジック
+
+### Task 6: データ読み込みと初期化
+- **ID**: T-6
+- **Priority**: P0
+- **Depends on**: T-2, T-5
+- **Files**: `site/js/app.js`
+- **Scope**: `init()`, `buildSongIndex()`, `updateStats()`, `extractVideoId()`
+- **Acceptance Criteria**:
+  - [x] `fetch()` で `./data/streams.json` と `./data/setlists.json` を取得
+  - [x] `buildSongIndex()` で楽曲ごとの歌唱回数・最新日・出演配信リストを集約
+  - [x] `updateStats()` で Stats Bar（配信数・楽曲数・ユニーク曲数）を更新
+  - [x] `extractVideoId()` でYouTube URLからvideo_idを抽出
+
+### Task 7: 歌枠一覧の描画
+- **ID**: T-7
+- **Priority**: P0
+- **Depends on**: T-6
+- **Files**: `site/js/app.js`
+- **Scope**: `renderStreams()`, `toggleSetlist()`
+- **Acceptance Criteria**:
+  - [x] 配信日の新しい順でカードをDOM生成
+  - [x] 各カードにサムネイル（`img.youtube.com/vi/{video_id}/mqdefault.jpg`）、曲数バッジ、配信日、タイトル、曲数を表示
+  - [x] カードクリックでセットリストを展開/折りたたみ（max-heightアニメーション）
+  - [x] セットリスト内に曲番号・曲名・アーティスト・タイムスタンプ・再生ボタンを表示
+  - [x] 再生ボタンクリックでYouTube `?t=秒数` を新タブで開く
+
+### Task 8: 楽曲一覧の描画
+- **ID**: T-8
+- **Priority**: P0
+- **Depends on**: T-6
+- **Files**: `site/js/app.js`
+- **Scope**: `renderSongs()`, `handleSort()`, `toggleSongDetail()`
+- **Acceptance Criteria**:
+  - [x] songIndexからテーブルをDOM生成（曲名・アーティスト・歌唱回数・最新歌唱日）
+  - [x] ソートボタンで曲名順/回数順/最新日順を切り替え
+  - [x] 行クリックで出演配信一覧を展開（日付・配信名・タイムスタンプ・再生ボタン）
+  - [x] 再生ボタンクリックでYouTube `?t=秒数` を新タブで開く
+
+### Task 9: タブ切り替えと検索
+- **ID**: T-9
+- **Priority**: P0
+- **Depends on**: T-7, T-8
+- **Files**: `site/js/app.js`
+- **Scope**: Tab切り替え, `handleSearch()`
+- **Acceptance Criteria**:
+  - [x] タブボタンクリックで `.active` クラスを切り替え、対応する `.tab-content` を表示/非表示
+  - [x] 検索入力でインクリメンタルサーチ（inputイベントで即時フィルタリング）
+  - [x] 歌枠一覧タブ: セトリ内の曲名・アーティストにマッチするカードのみ表示
+  - [x] 楽曲一覧タブ: 曲名・アーティストにマッチする行のみ表示
+  - [x] 検索結果件数を表示
+
+## Wave 4 — デプロイ
+
+### Task 10: GitHub Actions ワークフロー作成
+- **ID**: T-10
+- **Priority**: P0
+- **Depends on**: T-4
+- **Files**: `.github/workflows/deploy.yml`
+- **Acceptance Criteria**:
+  - [x] `cron` (毎時) と `workflow_dispatch` (手動) の両トリガーを設定
+  - [x] Node.jsセットアップ → `npm install` → `node scripts/fetch-sheets.js`
+  - [x] `site/` と生成された `data/` をマージした出力ディレクトリを構成
+  - [x] `gh-pages` ブランチへデプロイ（peaceiris/actions-gh-pages）
+  - [x] Secrets（`GOOGLE_API_KEY`, `SPREADSHEET_ID`）を参照
