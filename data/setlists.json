@@ -1,0 +1,42 @@
+[
+  {
+    "stream_id": "S001",
+    "track_no": 1,
+    "song_title": "桜",
+    "artist": "コブクロ",
+    "timestamp": "0:12:45",
+    "seconds": 765
+  },
+  {
+    "stream_id": "S002",
+    "track_no": 1,
+    "song_title": "UNION",
+    "artist": "OxT ",
+    "timestamp": "0:43:11",
+    "seconds": 2591
+  },
+  {
+    "stream_id": "S002",
+    "track_no": 2,
+    "song_title": "A",
+    "artist": "Artist D",
+    "timestamp": "0:45:32",
+    "seconds": 2732
+  },
+  {
+    "stream_id": "S002",
+    "track_no": 3,
+    "song_title": "B",
+    "artist": "ArtistC",
+    "timestamp": "0:52:32",
+    "seconds": 3152
+  },
+  {
+    "stream_id": "S002",
+    "track_no": 4,
+    "song_title": "C",
+    "artist": "ArtistC",
+    "timestamp": "0:59:23",
+    "seconds": 3563
+  }
+]
