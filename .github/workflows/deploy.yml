@@ -27,7 +27,7 @@ jobs:
         run: npm install
 
       - name: Fetch data from Google Sheets
-        run: node scripts/fetch-sheets.js
+        run: node scripts/fetch-sheets/fetch-sheets.js
         env:
           SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}

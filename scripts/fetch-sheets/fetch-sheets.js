@@ -5,7 +5,7 @@ const path = require('path');
 
 const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
 const API_KEY = process.env.GOOGLE_API_KEY;
-const DATA_DIR = path.join(__dirname, '..', 'data');
+const DATA_DIR = path.join(__dirname, '..', '..', 'data');
 
 if (!SPREADSHEET_ID || !API_KEY) {
   console.error('Error: SPREADSHEET_ID and GOOGLE_API_KEY must be set');
