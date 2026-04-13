@@ -71,10 +71,8 @@ function buildSongIndex(streams, setlists) {
 }
 
 function updateStats() {
-  const uniqueSongs = new Set(setlists.map(s => `${s.song_title}___${s.artist}`));
   document.getElementById('statStreams').textContent = streams.length;
   document.getElementById('statSongs').textContent = setlists.length;
-  document.getElementById('statUnique').textContent = uniqueSongs.size;
 }
 
 // ============================================================

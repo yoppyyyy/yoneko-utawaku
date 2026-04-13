@@ -127,3 +127,31 @@
   - [x] `site/` と生成された `data/` をマージした出力ディレクトリを構成
   - [x] `gh-pages` ブランチへデプロイ（peaceiris/actions-gh-pages）
   - [x] Secrets（`GOOGLE_API_KEY`, `SPREADSHEET_ID`）を参照
+
+## Wave 5 — 運用補助ツール / 識別情報更新
+
+### Task 11: スプレッドシート元データ取得スクリプト（補助）
+- **ID**: T-11
+- **Priority**: P1
+- **Depends on**: なし
+- **Files**: `scripts/fetch-youtube/fetch_utawaku.py`, `scripts/fetch-youtube/.env`, `.gitignore`
+- **Acceptance Criteria**:
+  - [x] `scripts/` 配下を `fetch-sheets/` と `fetch-youtube/` の対称構成に再編
+  - [x] `.github/workflows/deploy.yml` と `package.json` の参照パスを更新
+  - [x] `fetch-sheets.js` の `DATA_DIR` を `../../data` に修正
+  - [x] YouTube Data API v3 でチャンネル（夜猫アヤ）の動画を取得
+  - [x] タイトルに「歌枠」を含む動画のみ抽出 → `utawaku_list.csv` に出力
+  - [x] `API_KEY` / `CHANNEL_ID` を `.env` から読み込み（`python-dotenv`）
+  - [x] ローカル実行で41件の抽出を確認
+
+### Task 12: サイト識別情報の更新（change-20260413）
+- **ID**: T-12
+- **Priority**: P0
+- **Depends on**: T-2
+- **Files**: `site/index.html`, `site/js/app.js`, `site/css/style.css`
+- **Acceptance Criteria**:
+  - [x] ヘッダーのサイトタイトルを「夜猫歌枠あーかいぶ」に変更（英語表記を削除）
+  - [x] サブタイトルを2行に変更（Pastel Live所属… / このサイトは非公式のファンサイトです。）
+  - [x] Stats Bar から Unique 列を削除
+  - [x] `app.js` の `statUnique` 更新処理を削除
+  - [x] フッター権利表記を change-20260413 の文言に更新

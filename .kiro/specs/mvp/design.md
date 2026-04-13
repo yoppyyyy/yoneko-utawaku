@@ -1,4 +1,4 @@
-# Design: MVP — VTuber歌枠ファンサイト
+# Design: MVP — 夜猫歌枠あーかいぶ
 
 ## Architecture Overview
 
@@ -29,7 +29,7 @@
 ┌─────────────────────────────────────────────┐
 │  Header: サイトタイトル + サブタイトル          │
 ├─────────────────────────────────────────────┤
-│  Stats Bar: Streams数 / Songs数 / Unique数   │
+│  Stats Bar: Streams数 / Songs数              │
 ├─────────────────────────────────────────────┤
 │  Search Bar: インクリメンタルサーチ             │
 ├─────────────────────────────────────────────┤
@@ -47,14 +47,16 @@
 
 ### C-1: Header
 
-- サイトタイトル（Cinzelフォント、ゴールドグラデーション）
-- サブタイトル（Cormorant Garamond、イタリック）
-- メタ情報（「非公式ファンサイト」）
+- サイトタイトル「夜猫歌枠あーかいぶ」（displayフォント、ゴールドグラデーション、英語表記なし）
+- サブタイトル（2行、日本語・bodyフォント・斜体なし）:
+  1. 「Pastel Live所属　夜猫アヤさんの歌枠を検索できるサイトです。」
+  2. 「このサイトは非公式のファンサイトです。」
 - 対応FR: なし（装飾）
 
 ### C-2: Stats Bar
 
-- 配信数・楽曲数・ユニーク曲数をJSONから算出して表示
+- 配信数（Streams）と楽曲数（Songs）の2項目をJSONから算出して表示
+- ユニーク曲数（Unique）カウンタは表示しない
 - 対応FR: なし（UX向上）
 
 ### C-3: Search Bar
@@ -102,8 +104,9 @@
 
 ### C-8: Footer
 
-- クレジット表記
-- 「非公式ファンサイト」注記
+- 権利表記（2行。ヘッダーと重複する「本サイトは非公式…」は含めない）:
+  1. 当サイトにて掲載している動画は夜猫アヤ様、及びPastel Live様が制作したものであり、著作権は権利者に帰属します。
+  2. This is an unofficial fan site. All stream content belongs to its respective creator.
 - 対応FR: なし（装飾）
 
 ## Design System
@@ -120,7 +123,30 @@ Google Fonts CDNから読み込み。
 
 ### Color Palette
 
-requirements.md NFR-2.2 で定義済み。CSSカスタムプロパティで `:root` に設定。
+requirements.md NFR-2.2 で定義済みの5色をCSSカスタムプロパティで `:root` に設定する。
+
+| トークン | 値 | 役割 |
+|---------|-----|------|
+| `--c-bg` | `#262D40` (No1) | body背景。唯一の不透明な土台 |
+| `--c-accent` | `#97AE73` (No2) | 強調色。サイトタイトルのグラデ、再生ボタン、アクティブ指標 |
+| `--c-teal` | `#3F8B92` (No3) | セカンダリアクセント。Stats数値、リンク、副次強調 |
+| `--c-muted` | `#8996AC` (No4) | ボーダー、ミュートテキスト |
+| `--c-text` | `#8AAEA9` (No5) | 本文テキスト |
+
+#### Surface（面）の階層化
+
+新しい色は追加せず、上記5色のrgba半透明オーバーレイで面を重ねて階層を作る：
+
+| トークン | 値 | 用途 |
+|---------|-----|------|
+| `--c-surface` | `rgba(138,174,169,0.08)` | カード／タブ帯／検索バー／テーブル行（bgから一段浮く面） |
+| `--c-surface-raised` | `rgba(138,174,169,0.14)` | ホバー等、更に浮かせる面 |
+| `--c-surface-sunken` | `rgba(0,0,0,0.22)` | セトリ展開部など一段沈む面 |
+| アクティブタブ／選択ソート | `rgba(151,174,115,0.22)` | No2セージの薄膜 |
+
+#### 背景装飾
+
+`body::before` / `body::after` による装飾オーバーレイ（ラジアルグラデ／ひし形パターン）は**使用しない**。背景は `--c-bg` のフラットな単色とする。
 
 ### Spacing & Radius
 
@@ -129,6 +155,26 @@ requirements.md NFR-2.2 で定義済み。CSSカスタムプロパティで `:ro
 | `--radius-sm` | 8px | テーブル行、小要素 |
 | `--radius-md` | 14px | カード |
 | `--radius-lg` | 20px | 検索バー、タブバー |
+
+### Header / Above-the-fold Density
+
+ヘッダー上部を詰めて、検索窓とStats Barがファーストビューの中央やや上に収まるようにする：
+
+| 対象 | 値 | 備考 |
+|------|-----|------|
+| `header` padding | `8px 0 4px` | 旧 `40px 0 20px` から大幅に縮小 |
+| `.stats-bar` margin | `4px 0 2px` | — |
+| `.gothic-divider` margin | `4px 0` | — |
+| `.search-section` margin | `6px auto` | — |
+
+### Stream Card / Thumbnail Size
+
+歌枠カードはコンパクトなグリッドとし、サムネイルを過度に大きく見せない：
+
+| 対象 | 値 | 備考 |
+|------|-----|------|
+| `.streams-grid` 列幅 | `repeat(auto-fill, minmax(224px, 1fr))` | 従来比 約70%（旧 320px）。サムネイルは `aspect-ratio: 16/9` で自動追随 |
+| フォールバック画像の高さ | `126px` | 旧 180px の約70% |
 
 ### Responsive Breakpoint
 
