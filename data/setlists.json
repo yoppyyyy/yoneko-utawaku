@@ -187,7 +187,7 @@
     "stream_id": "S001",
     "track_no": 24,
     "song_title": "残響散歌",
-    "artist": "",
+    "artist": "Aimer",
     "timestamp": "02:57:16",
     "seconds": 10636
   },
@@ -931,7 +931,7 @@
     "stream_id": "S007",
     "track_no": 117,
     "song_title": "22才の別れ",
-    "artist": "",
+    "artist": "かぐや姫",
     "timestamp": "01:26:57",
     "seconds": 5217
   },
@@ -1459,7 +1459,7 @@
     "stream_id": "S010",
     "track_no": 183,
     "song_title": "1/3の純情な感情",
-    "artist": "",
+    "artist": "SIAM SHADE",
     "timestamp": "03:14:26",
     "seconds": 11666
   },
@@ -1963,7 +1963,7 @@
     "stream_id": "S013",
     "track_no": 246,
     "song_title": "残響散歌",
-    "artist": "",
+    "artist": "Aimer",
     "timestamp": "01:24:48",
     "seconds": 5088
   },
@@ -2817,7 +2817,7 @@
   },
   {
     "stream_id": "S020",
-    "track_no": 352,
+    "track_no": 353,
     "song_title": "ラブ・ストーリーは突然に",
     "artist": "",
     "timestamp": "01:31:27",
@@ -2825,7 +2825,7 @@
   },
   {
     "stream_id": "S020",
-    "track_no": 352,
+    "track_no": 354,
     "song_title": "ムーンライト伝説",
     "artist": "",
     "timestamp": "01:39:02",
@@ -2833,7 +2833,7 @@
   },
   {
     "stream_id": "S020",
-    "track_no": 352,
+    "track_no": 355,
     "song_title": "負けないで",
     "artist": "",
     "timestamp": "01:44:19",
@@ -2841,7 +2841,7 @@
   },
   {
     "stream_id": "S020",
-    "track_no": 352,
+    "track_no": 356,
     "song_title": "君が好きだと叫びたい",
     "artist": "",
     "timestamp": "01:50:08",
@@ -2849,7 +2849,7 @@
   },
   {
     "stream_id": "S020",
-    "track_no": 352,
+    "track_no": 357,
     "song_title": "ロマンスの神様",
     "artist": "",
     "timestamp": "01:57:37",
@@ -2857,7 +2857,7 @@
   },
   {
     "stream_id": "S020",
-    "track_no": 352,
+    "track_no": 358,
     "song_title": "世界が終わるまでは⋯",
     "artist": "",
     "timestamp": "02:06:07",
@@ -2865,7 +2865,7 @@
   },
   {
     "stream_id": "S020",
-    "track_no": 352,
+    "track_no": 359,
     "song_title": "LOVE LOVE LOVE",
     "artist": "",
     "timestamp": "02:15:05",
@@ -2873,7 +2873,7 @@
   },
   {
     "stream_id": "S020",
-    "track_no": 352,
+    "track_no": 360,
     "song_title": "残酷な天使のテーゼ",
     "artist": "",
     "timestamp": "02:21:36",
@@ -2881,7 +2881,7 @@
   },
   {
     "stream_id": "S020",
-    "track_no": 352,
+    "track_no": 361,
     "song_title": "DEPARTURES",
     "artist": "",
     "timestamp": "02:29:19",
@@ -2889,7 +2889,7 @@
   },
   {
     "stream_id": "S020",
-    "track_no": 352,
+    "track_no": 362,
     "song_title": "そばかす",
     "artist": "",
     "timestamp": "02:37:23",
@@ -2897,7 +2897,7 @@
   },
   {
     "stream_id": "S020",
-    "track_no": 352,
+    "track_no": 363,
     "song_title": "White Love",
     "artist": "",
     "timestamp": "02:44:13",
@@ -2905,7 +2905,7 @@
   },
   {
     "stream_id": "S020",
-    "track_no": 352,
+    "track_no": 364,
     "song_title": "めざせポケモンマスター",
     "artist": "",
     "timestamp": "02:52:25",
@@ -2913,7 +2913,7 @@
   },
   {
     "stream_id": "S020",
-    "track_no": 352,
+    "track_no": 365,
     "song_title": "Time goes by",
     "artist": "",
     "timestamp": "03:01:35",
@@ -2921,394 +2921,1802 @@
   },
   {
     "stream_id": "S020",
-    "track_no": 352,
+    "track_no": 366,
     "song_title": "Butter-Fly",
     "artist": "",
     "timestamp": "03:08:25",
     "seconds": 11305
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
+    "stream_id": "S021",
+    "track_no": 367,
+    "song_title": "DANZEN!ふたりはプリキュア",
     "artist": "",
-    "timestamp": "",
+    "timestamp": "00:12:50",
+    "seconds": 770
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 368,
+    "song_title": "檄！帝国華撃団",
+    "artist": "",
+    "timestamp": "00:20:53",
+    "seconds": 1253
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 369,
+    "song_title": "晴る",
+    "artist": "",
+    "timestamp": "00:27:47",
+    "seconds": 1667
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 370,
+    "song_title": "創世のアクエリオン",
+    "artist": "",
+    "timestamp": "00:34:54",
+    "seconds": 2094
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 371,
+    "song_title": "BLUE BIRD",
+    "artist": "",
+    "timestamp": "00:42:51",
+    "seconds": 2571
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 372,
+    "song_title": "チキチキバンバン",
+    "artist": "",
+    "timestamp": "00:52:00",
+    "seconds": 3120
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 373,
+    "song_title": "新時代",
+    "artist": "",
+    "timestamp": "00:57:45",
+    "seconds": 3465
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 374,
+    "song_title": "always",
+    "artist": "",
+    "timestamp": "01:08:58",
+    "seconds": 4138
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 375,
+    "song_title": "evolution",
+    "artist": "",
+    "timestamp": "01:15:59",
+    "seconds": 4559
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 376,
+    "song_title": "Mela!",
+    "artist": "",
+    "timestamp": "01:25:46",
+    "seconds": 5146
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 377,
+    "song_title": "やさしさに包まれたなら",
+    "artist": "",
+    "timestamp": "01:32:10",
+    "seconds": 5530
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 378,
+    "song_title": "Cry Baby",
+    "artist": "",
+    "timestamp": "01:48:22",
+    "seconds": 6502
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 379,
+    "song_title": "FREEDOM",
+    "artist": "",
+    "timestamp": "02:00:34",
+    "seconds": 7234
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 380,
+    "song_title": "Believe(玉置成実)",
+    "artist": "",
+    "timestamp": "02:11:02",
+    "seconds": 7862
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 381,
+    "song_title": "嵐の中で輝いて",
+    "artist": "",
+    "timestamp": "02:20:27",
+    "seconds": 8427
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 382,
+    "song_title": "残響散歌",
+    "artist": "Aimer",
+    "timestamp": "02:27:44",
+    "seconds": 8864
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 383,
+    "song_title": "カタオモイ",
+    "artist": "",
+    "timestamp": "02:32:40",
+    "seconds": 9160
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 384,
+    "song_title": "Believe(Folder5)",
+    "artist": "",
+    "timestamp": "02:38:36",
+    "seconds": 9516
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 385,
+    "song_title": "Follow Me",
+    "artist": "",
+    "timestamp": "02:45:23",
+    "seconds": 9923
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 386,
+    "song_title": "出逢った頃のように",
+    "artist": "",
+    "timestamp": "02:51:43",
+    "seconds": 10303
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 387,
+    "song_title": "DAN DAN 心魅かれてく",
+    "artist": "",
+    "timestamp": "03:00:37",
+    "seconds": 10837
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 388,
+    "song_title": "マイ フレンド",
+    "artist": "",
+    "timestamp": "03:05:49",
+    "seconds": 11149
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 389,
+    "song_title": "第ゼロ感",
+    "artist": "",
+    "timestamp": "03:12:39",
+    "seconds": 11559
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 390,
+    "song_title": "CHE.R.RY",
+    "artist": "",
+    "timestamp": "03:19:45",
+    "seconds": 11985
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 391,
+    "song_title": "チェリー",
+    "artist": "",
+    "timestamp": "03:24:55",
+    "seconds": 12295
+  },
+  {
+    "stream_id": "S021",
+    "track_no": 392,
+    "song_title": "Grip!",
+    "artist": "",
+    "timestamp": "03:31:03",
+    "seconds": 12663
+  },
+  {
+    "stream_id": "S022",
+    "track_no": 393,
+    "song_title": "ハナミズキ",
+    "artist": "",
+    "timestamp": "00:18:57",
+    "seconds": 1137
+  },
+  {
+    "stream_id": "S022",
+    "track_no": 394,
+    "song_title": "Dearest",
+    "artist": "",
+    "timestamp": "00:44:55",
+    "seconds": 2695
+  },
+  {
+    "stream_id": "S022",
+    "track_no": 395,
+    "song_title": "風になる",
+    "artist": "",
+    "timestamp": "01:04:01",
+    "seconds": 3841
+  },
+  {
+    "stream_id": "S022",
+    "track_no": 396,
+    "song_title": "奏(かなで)",
+    "artist": "",
+    "timestamp": "01:14:08",
+    "seconds": 4448
+  },
+  {
+    "stream_id": "S022",
+    "track_no": 397,
+    "song_title": "三日月",
+    "artist": "",
+    "timestamp": "01:21:27",
+    "seconds": 4887
+  },
+  {
+    "stream_id": "S022",
+    "track_no": 398,
+    "song_title": "Sincerely",
+    "artist": "",
+    "timestamp": "01:37:48",
+    "seconds": 5868
+  },
+  {
+    "stream_id": "S022",
+    "track_no": 399,
+    "song_title": "ヘビーローテーション",
+    "artist": "",
+    "timestamp": "01:47:10",
+    "seconds": 6430
+  },
+  {
+    "stream_id": "S022",
+    "track_no": 400,
+    "song_title": "メリッサ",
+    "artist": "",
+    "timestamp": "01:57:08",
+    "seconds": 7028
+  },
+  {
+    "stream_id": "S022",
+    "track_no": 401,
+    "song_title": "愛唄",
+    "artist": "",
+    "timestamp": "02:11:13",
+    "seconds": 7873
+  },
+  {
+    "stream_id": "S022",
+    "track_no": 402,
+    "song_title": "ダイアモンド クレバス",
+    "artist": "",
+    "timestamp": "02:34:45",
+    "seconds": 9285
+  },
+  {
+    "stream_id": "S022",
+    "track_no": 403,
+    "song_title": "brave heart",
+    "artist": "",
+    "timestamp": "02:53:57",
+    "seconds": 10437
+  },
+  {
+    "stream_id": "S022",
+    "track_no": 404,
+    "song_title": "walking proud",
+    "artist": "",
+    "timestamp": "03:00:59",
+    "seconds": 10859
+  },
+  {
+    "stream_id": "S023",
+    "track_no": 405,
+    "song_title": "プラチナ",
+    "artist": "",
+    "timestamp": "00:09:53",
+    "seconds": 593
+  },
+  {
+    "stream_id": "S023",
+    "track_no": 406,
+    "song_title": "ルージュの伝言",
+    "artist": "",
+    "timestamp": "00:34:39",
+    "seconds": 2079
+  },
+  {
+    "stream_id": "S023",
+    "track_no": 407,
+    "song_title": "キューティーハニー",
+    "artist": "",
+    "timestamp": "00:45:56",
+    "seconds": 2756
+  },
+  {
+    "stream_id": "S023",
+    "track_no": 408,
+    "song_title": "コネクト",
+    "artist": "",
+    "timestamp": "00:51:27",
+    "seconds": 3087
+  },
+  {
+    "stream_id": "S023",
+    "track_no": 409,
+    "song_title": "銀河鉄道999",
+    "artist": "",
+    "timestamp": "01:00:01",
+    "seconds": 3601
+  },
+  {
+    "stream_id": "S023",
+    "track_no": 410,
+    "song_title": "チキチキバンバン",
+    "artist": "",
+    "timestamp": "01:06:39",
+    "seconds": 3999
+  },
+  {
+    "stream_id": "S023",
+    "track_no": 411,
+    "song_title": "風になる",
+    "artist": "",
+    "timestamp": "01:15:22",
+    "seconds": 4522
+  },
+  {
+    "stream_id": "S023",
+    "track_no": 412,
+    "song_title": "炎",
+    "artist": "",
+    "timestamp": "01:22:21",
+    "seconds": 4941
+  },
+  {
+    "stream_id": "S023",
+    "track_no": 413,
+    "song_title": "いつも何度でも",
+    "artist": "",
+    "timestamp": "01:36:13",
+    "seconds": 5773
+  },
+  {
+    "stream_id": "S023",
+    "track_no": 414,
+    "song_title": "DAN DAN 心魅かれてく",
+    "artist": "",
+    "timestamp": "01:45:47",
+    "seconds": 6347
+  },
+  {
+    "stream_id": "S023",
+    "track_no": 415,
+    "song_title": "ダイアモンド クレバス",
+    "artist": "",
+    "timestamp": "01:53:16",
+    "seconds": 6796
+  },
+  {
+    "stream_id": "S024",
+    "track_no": 416,
+    "song_title": "INVOKE",
+    "artist": "",
+    "timestamp": "00:27:15",
+    "seconds": 1635
+  },
+  {
+    "stream_id": "S024",
+    "track_no": 417,
+    "song_title": "Realize",
+    "artist": "",
+    "timestamp": "00:38:23",
+    "seconds": 2303
+  },
+  {
+    "stream_id": "S024",
+    "track_no": 418,
+    "song_title": "DANZEN!ふたりはプリキュア",
+    "artist": "",
+    "timestamp": "00:55:13",
+    "seconds": 3313
+  },
+  {
+    "stream_id": "S024",
+    "track_no": 419,
+    "song_title": "おジャ魔女カーニバル",
+    "artist": "",
+    "timestamp": "01:05:22",
+    "seconds": 3922
+  },
+  {
+    "stream_id": "S024",
+    "track_no": 420,
+    "song_title": "BLUE BIRD",
+    "artist": "",
+    "timestamp": "01:16:12",
+    "seconds": 4572
+  },
+  {
+    "stream_id": "S024",
+    "track_no": 421,
+    "song_title": "そばかす",
+    "artist": "",
+    "timestamp": "01:31:00",
+    "seconds": 5460
+  },
+  {
+    "stream_id": "S024",
+    "track_no": 422,
+    "song_title": "Butter-Fly",
+    "artist": "",
+    "timestamp": "02:06:28",
+    "seconds": 7588
+  },
+  {
+    "stream_id": "S024",
+    "track_no": 423,
+    "song_title": "The Biggest Dreamer",
+    "artist": "",
+    "timestamp": "02:14:27",
+    "seconds": 8067
+  },
+  {
+    "stream_id": "S024",
+    "track_no": 424,
+    "song_title": "創聖のアクエリオン",
+    "artist": "",
+    "timestamp": "02:22:51",
+    "seconds": 8571
+  },
+  {
+    "stream_id": "S024",
+    "track_no": 425,
+    "song_title": "檄！帝国華撃団",
+    "artist": "",
+    "timestamp": "02:32:27",
+    "seconds": 9147
+  },
+  {
+    "stream_id": "S024",
+    "track_no": 426,
+    "song_title": "ロミオとシンデレラ",
+    "artist": "",
+    "timestamp": "02:39:30",
+    "seconds": 9570
+  },
+  {
+    "stream_id": "S024",
+    "track_no": 427,
+    "song_title": "ルージュの伝言",
+    "artist": "",
+    "timestamp": "02:50:55",
+    "seconds": 10255
+  },
+  {
+    "stream_id": "S024",
+    "track_no": 428,
+    "song_title": "紅蓮華",
+    "artist": "",
+    "timestamp": "03:03:01",
+    "seconds": 10981
+  },
+  {
+    "stream_id": "S025",
+    "track_no": 429,
+    "song_title": "dummy0",
+    "artist": "ArtistDummy0",
+    "timestamp": "00:01:00",
+    "seconds": 60
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 430,
+    "song_title": "夏まつり",
+    "artist": "",
+    "timestamp": "00:16:00",
+    "seconds": 960
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 431,
+    "song_title": "波乗りジョニー",
+    "artist": "",
+    "timestamp": "00:31:30",
+    "seconds": 1890
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 432,
+    "song_title": "カントリー・ロード",
+    "artist": "",
+    "timestamp": "00:48:00",
+    "seconds": 2880
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 433,
+    "song_title": "HOT LIMIT",
+    "artist": "",
+    "timestamp": "00:59:25",
+    "seconds": 3565
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 434,
+    "song_title": "夏色",
+    "artist": "",
+    "timestamp": "01:05:57",
+    "seconds": 3957
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 435,
+    "song_title": "TSUNAMI",
+    "artist": "",
+    "timestamp": "01:13:28",
+    "seconds": 4408
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 436,
+    "song_title": "HANABI",
+    "artist": "",
+    "timestamp": "01:25:36",
+    "seconds": 5136
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 437,
+    "song_title": "innocent world",
+    "artist": "",
+    "timestamp": "01:37:54",
+    "seconds": 5874
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 438,
+    "song_title": "君が好きだと叫びたい",
+    "artist": "",
+    "timestamp": "01:49:12",
+    "seconds": 6552
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 439,
+    "song_title": "世界が終わるまでは",
+    "artist": "",
+    "timestamp": "01:54:18",
+    "seconds": 6858
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 440,
+    "song_title": "あなただけ見つめてる",
+    "artist": "",
+    "timestamp": "02:03:01",
+    "seconds": 7381
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 441,
+    "song_title": "マイフレンド",
+    "artist": "",
+    "timestamp": "02:12:40",
+    "seconds": 7960
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 442,
+    "song_title": "Sincerely",
+    "artist": "",
+    "timestamp": "02:20:04",
+    "seconds": 8404
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 443,
+    "song_title": "光るなら",
+    "artist": "",
+    "timestamp": "02:32:50",
+    "seconds": 9170
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 444,
+    "song_title": "ダイアモンドクレパス",
+    "artist": "",
+    "timestamp": "02:45:51",
+    "seconds": 9951
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 445,
+    "song_title": "ライオン",
+    "artist": "",
+    "timestamp": "02:51:40",
+    "seconds": 10300
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 446,
+    "song_title": "プラチナ",
+    "artist": "",
+    "timestamp": "04:02:25",
+    "seconds": 14545
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 447,
+    "song_title": "勇者",
+    "artist": "",
+    "timestamp": "04:11:40",
+    "seconds": 15100
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 448,
+    "song_title": "風になる",
+    "artist": "",
+    "timestamp": "04:25:48",
+    "seconds": 15948
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 449,
+    "song_title": "タッチ",
+    "artist": "",
+    "timestamp": "04:33:16",
+    "seconds": 16396
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 450,
+    "song_title": "メリッサ",
+    "artist": "",
+    "timestamp": "04:41:24",
+    "seconds": 16884
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 451,
+    "song_title": "創聖のアクエリオン",
+    "artist": "",
+    "timestamp": "04:48:39",
+    "seconds": 17319
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 452,
+    "song_title": "手紙 ～拝啓 十五の君へ～",
+    "artist": "",
+    "timestamp": "05:00:12",
+    "seconds": 18012
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 453,
+    "song_title": "Beautiful World",
+    "artist": "",
+    "timestamp": "05:08:25",
+    "seconds": 18505
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 454,
+    "song_title": "ボーイフレンド",
+    "artist": "",
+    "timestamp": "05:19:35",
+    "seconds": 19175
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 455,
+    "song_title": "残酷な夜に輝け",
+    "artist": "",
+    "timestamp": "05:27:36",
+    "seconds": 19656
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 456,
+    "song_title": "百花繚乱",
+    "artist": "",
+    "timestamp": "05:37:06",
+    "seconds": 20226
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 457,
+    "song_title": "未来予想図Ⅱ",
+    "artist": "",
+    "timestamp": "05:46:18",
+    "seconds": 20778
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 458,
+    "song_title": "三日月",
+    "artist": "",
+    "timestamp": "06:00:40",
+    "seconds": 21640
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 459,
+    "song_title": "恋するフォーチュンクッキー",
+    "artist": "",
+    "timestamp": "06:18:16",
+    "seconds": 22696
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 460,
+    "song_title": "明日の私に幸あれ",
+    "artist": "",
+    "timestamp": "06:28:05",
+    "seconds": 23285
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 461,
+    "song_title": "Lit it go ～ありのままで～",
+    "artist": "",
+    "timestamp": "06:40:09",
+    "seconds": 24009
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 462,
+    "song_title": "God knows...",
+    "artist": "",
+    "timestamp": "06:49:05",
+    "seconds": 24545
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 463,
+    "song_title": "Real Face",
+    "artist": "",
+    "timestamp": "07:03:12",
+    "seconds": 25392
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 464,
+    "song_title": "Get Wild",
+    "artist": "",
+    "timestamp": "07:12:04",
+    "seconds": 25924
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 465,
+    "song_title": "檄！帝国華撃団",
+    "artist": "",
+    "timestamp": "07:35:25",
+    "seconds": 27325
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 466,
+    "song_title": "ヒカリへ",
+    "artist": "",
+    "timestamp": "07:42:43",
+    "seconds": 27763
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 467,
+    "song_title": "世界中の誰よりきっと",
+    "artist": "",
+    "timestamp": "07:56:07",
+    "seconds": 28567
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 468,
+    "song_title": "シカ色デイズ",
+    "artist": "",
+    "timestamp": "08:02:04",
+    "seconds": 28924
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 469,
+    "song_title": "やさしさに包まれたなら",
+    "artist": "",
+    "timestamp": "08:13:55",
+    "seconds": 29635
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 470,
+    "song_title": "CHE.R.RY",
+    "artist": "",
+    "timestamp": "08:22:55",
+    "seconds": 30175
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 471,
+    "song_title": "第ゼロ感",
+    "artist": "",
+    "timestamp": "08:29:54",
+    "seconds": 30594
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 472,
+    "song_title": "Best Friend",
+    "artist": "",
+    "timestamp": "08:38:00",
+    "seconds": 31080
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 473,
+    "song_title": "ムーンライト伝説",
+    "artist": "",
+    "timestamp": "08:48:13",
+    "seconds": 31693
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 474,
+    "song_title": "CHA-LA HEAD-CHA-LA",
+    "artist": "",
+    "timestamp": "08:56:44",
+    "seconds": 32204
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 475,
+    "song_title": "ミッション! 健・康・第・イチ",
+    "artist": "",
+    "timestamp": "09:02:56",
+    "seconds": 32576
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 476,
+    "song_title": "Shangri-La",
+    "artist": "",
+    "timestamp": "09:16:21",
+    "seconds": 33381
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 477,
+    "song_title": "時の流れに身をまかせ",
+    "artist": "",
+    "timestamp": "09:36:33",
+    "seconds": 34593
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 478,
+    "song_title": "私は最強",
+    "artist": "",
+    "timestamp": "09:48:54",
+    "seconds": 35334
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 479,
+    "song_title": "ペガサス幻想",
+    "artist": "",
+    "timestamp": "11:02:18",
+    "seconds": 39738
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 480,
+    "song_title": "Time goes by",
+    "artist": "",
+    "timestamp": "11:13:03",
+    "seconds": 40383
+  },
+  {
+    "stream_id": "S026",
+    "track_no": 481,
+    "song_title": "プラネタリウム",
+    "artist": "",
+    "timestamp": "11:22:52",
+    "seconds": 40972
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 482,
+    "song_title": "Jupiter",
+    "artist": "",
+    "timestamp": "00:10:47",
+    "seconds": 647
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 483,
+    "song_title": "暁の車",
+    "artist": "",
+    "timestamp": "00:26:32",
+    "seconds": 1592
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 484,
+    "song_title": "紅蓮華",
+    "artist": "",
+    "timestamp": "00:35:32",
+    "seconds": 2132
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 485,
+    "song_title": "炎",
+    "artist": "",
+    "timestamp": "00:44:37",
+    "seconds": 2677
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 486,
+    "song_title": "世界に一つだけの花",
+    "artist": "",
+    "timestamp": "00:57:18",
+    "seconds": 3438
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 487,
+    "song_title": "Over Soul",
+    "artist": "",
+    "timestamp": "01:07:36",
+    "seconds": 4056
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 488,
+    "song_title": "可愛くてごめん",
+    "artist": "",
+    "timestamp": "01:18:43",
+    "seconds": 4723
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 489,
+    "song_title": "青と夏",
+    "artist": "",
+    "timestamp": "01:24:54",
+    "seconds": 5094
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 490,
+    "song_title": "Mela!",
+    "artist": "",
+    "timestamp": "01:33:28",
+    "seconds": 5608
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 491,
+    "song_title": "カタオモイ",
+    "artist": "",
+    "timestamp": "01:45:32",
+    "seconds": 6332
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 492,
+    "song_title": "ルージュの伝言",
+    "artist": "",
+    "timestamp": "01:54:02",
+    "seconds": 6842
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 493,
+    "song_title": "いつも何度でも",
+    "artist": "",
+    "timestamp": "02:01:34",
+    "seconds": 7294
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 494,
+    "song_title": "First Love",
+    "artist": "",
+    "timestamp": "02:08:36",
+    "seconds": 7716
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 495,
+    "song_title": "君をのせて",
+    "artist": "",
+    "timestamp": "02:16:07",
+    "seconds": 8167
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 496,
+    "song_title": "夜空ノムコウ",
+    "artist": "",
+    "timestamp": "02:23:45",
+    "seconds": 8625
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 497,
+    "song_title": "Story",
+    "artist": "",
+    "timestamp": "02:33:32",
+    "seconds": 9212
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 498,
+    "song_title": "君の知らない物語",
+    "artist": "",
+    "timestamp": "02:46:34",
+    "seconds": 9994
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 499,
+    "song_title": "明け星",
+    "artist": "",
+    "timestamp": "03:05:05",
+    "seconds": 11105
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 500,
+    "song_title": "ドライフラワー",
+    "artist": "",
+    "timestamp": "03:13:20",
+    "seconds": 11600
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 501,
+    "song_title": "only my railgun",
+    "artist": "FripSide",
+    "timestamp": "03:32:43",
+    "seconds": 12763
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 502,
+    "song_title": "残響散歌",
+    "artist": "Aimer",
+    "timestamp": "03:47:07",
+    "seconds": 13627
+  },
+  {
+    "stream_id": "S027",
+    "track_no": 503,
+    "song_title": "secret base 〜君がくれたもの〜",
+    "artist": "ZONE",
+    "timestamp": "03:52:32",
+    "seconds": 13952
+  },
+  {
+    "stream_id": "S028",
+    "track_no": 504,
+    "song_title": "dummy1",
+    "artist": "ArtistDummy1",
+    "timestamp": "00:01:00",
+    "seconds": 60
+  },
+  {
+    "stream_id": "S029",
+    "track_no": 505,
+    "song_title": "dummy2",
+    "artist": "ArtistDummy2",
+    "timestamp": "00:01:00",
+    "seconds": 60
+  },
+  {
+    "stream_id": "S030",
+    "track_no": 506,
+    "song_title": "dummy3",
+    "artist": "ArtistDummy3",
+    "timestamp": "00:01:00",
+    "seconds": 60
+  },
+  {
+    "stream_id": "S031",
+    "track_no": 507,
+    "song_title": "dummy4",
+    "artist": "ArtistDummy4",
+    "timestamp": "00:01:00",
+    "seconds": 60
+  },
+  {
+    "stream_id": "S032",
+    "track_no": 508,
+    "song_title": "dummy5",
+    "artist": "ArtistDummy5",
+    "timestamp": "00:01:00",
+    "seconds": 60
+  },
+  {
+    "stream_id": "S033",
+    "track_no": 509,
+    "song_title": "dummy6",
+    "artist": "ArtistDummy6",
+    "timestamp": "00:01:00",
+    "seconds": 60
+  },
+  {
+    "stream_id": "S034",
+    "track_no": 510,
+    "song_title": "dummy7",
+    "artist": "ArtistDummy7",
+    "timestamp": "00:01:00",
+    "seconds": 60
+  },
+  {
+    "stream_id": "S035",
+    "track_no": 511,
+    "song_title": "dummy8",
+    "artist": "ArtistDummy8",
+    "timestamp": "00:01:00",
+    "seconds": 60
+  },
+  {
+    "stream_id": "S036",
+    "track_no": 512,
+    "song_title": "dummy9",
+    "artist": "ArtistDummy9",
+    "timestamp": "00:01:00",
+    "seconds": 60
+  },
+  {
+    "stream_id": "S037",
+    "track_no": 513,
+    "song_title": "dummy10",
+    "artist": "ArtistDummy10",
+    "timestamp": "00:01:00",
+    "seconds": 60
+  },
+  {
+    "stream_id": "S038",
+    "track_no": 514,
+    "song_title": "創聖のアクエリオン",
+    "artist": "AKINO",
+    "timestamp": "00:14:31",
+    "seconds": 871
+  },
+  {
+    "stream_id": "S038",
+    "track_no": 515,
+    "song_title": "さくら（独唱）",
+    "artist": "森山直太朗",
+    "timestamp": "00:27:33",
+    "seconds": 1653
+  },
+  {
+    "stream_id": "S038",
+    "track_no": 516,
+    "song_title": "手紙～拝啓十五の君へ～",
+    "artist": "アンジェラ・アキ",
+    "timestamp": "00:37:52",
+    "seconds": 2272
+  },
+  {
+    "stream_id": "S038",
+    "track_no": 517,
+    "song_title": "春～Spring～",
+    "artist": "Hysteric Blue",
+    "timestamp": "00:51:52",
+    "seconds": 3112
+  },
+  {
+    "stream_id": "S038",
+    "track_no": 518,
+    "song_title": "春よ、来い",
+    "artist": "松任谷由実",
+    "timestamp": "01:05:04",
+    "seconds": 3904
+  },
+  {
+    "stream_id": "S038",
+    "track_no": 519,
+    "song_title": "Get Wild",
+    "artist": "TM Network",
+    "timestamp": "01:14:49",
+    "seconds": 4489
+  },
+  {
+    "stream_id": "S038",
+    "track_no": 520,
+    "song_title": "輪舞-revolution",
+    "artist": "奥井雅美",
+    "timestamp": "01:29:41",
+    "seconds": 5381
+  },
+  {
+    "stream_id": "S038",
+    "track_no": 521,
+    "song_title": "ダイヤミモンドクレバス",
+    "artist": "シェリル・ノーム starring May'n",
+    "timestamp": "01:43:10",
+    "seconds": 6190
+  },
+  {
+    "stream_id": "S038",
+    "track_no": 522,
+    "song_title": "SMILY",
+    "artist": "大塚愛",
+    "timestamp": "02:25:36",
+    "seconds": 8736
+  },
+  {
+    "stream_id": "S038",
+    "track_no": 523,
+    "song_title": "ココロのちず",
+    "artist": "BOYSTYLE",
+    "timestamp": "02:36:03",
+    "seconds": 9363
+  },
+  {
+    "stream_id": "S038",
+    "track_no": 524,
+    "song_title": "花束を君に",
+    "artist": "宇多田ヒカル",
+    "timestamp": "02:46:16",
+    "seconds": 9976
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 525,
+    "song_title": "桜",
+    "artist": "コブクロ",
+    "timestamp": "00:12:35",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 526,
+    "song_title": "CHE.R.RY",
+    "artist": "YUI",
+    "timestamp": "00:23:25",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 527,
+    "song_title": "SAKURAドロップス",
+    "artist": "宇多田ヒカル",
+    "timestamp": "00:32:28",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 528,
+    "song_title": "千本桜",
+    "artist": "和楽器バンド",
+    "timestamp": "00:41:40",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 529,
+    "song_title": "桜色舞うころ",
+    "artist": "中島美嘉",
+    "timestamp": "00:52:15",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 530,
+    "song_title": "春よ、来い",
+    "artist": "松任谷由実",
+    "timestamp": "01:05:06",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 531,
+    "song_title": "ライラック",
+    "artist": "Mrs. GREEN APPLE",
+    "timestamp": "01:12:52",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 532,
+    "song_title": "春〜Spring〜",
+    "artist": "Hysteric Blue",
+    "timestamp": "01:22:20",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 533,
+    "song_title": "晴る",
+    "artist": "ヨルシカ",
+    "timestamp": "01:30:00",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 534,
+    "song_title": "プラチナ",
+    "artist": "坂本真綾",
+    "timestamp": "01:40:26",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 535,
+    "song_title": "God knows…",
+    "artist": "涼宮ハルヒ",
+    "timestamp": "01:52:24",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 536,
+    "song_title": "シュガーソングとビターステップ",
+    "artist": "UNISON",
+    "timestamp": "03:04:00",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 537,
+    "song_title": "檄！帝国華撃団",
+    "artist": "真宮寺さくら（横山智佐）＆帝国歌劇団",
+    "timestamp": "03:10:36",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 538,
+    "song_title": "ライオン",
+    "artist": "May'n/中島愛",
+    "timestamp": "03:16:06",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 539,
+    "song_title": "星間飛行",
+    "artist": "ランカ・リー＝中島愛",
+    "timestamp": "03:24:11",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 540,
+    "song_title": "夢をかなえてドラえもん",
+    "artist": "Mao",
+    "timestamp": "03:32:40",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 541,
+    "song_title": "君が好きだと叫びたい",
+    "artist": "BAAD",
+    "timestamp": "03:43:52",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 542,
+    "song_title": "世界が終るまでは…",
+    "artist": "WANDS",
+    "timestamp": "03:48:01",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 543,
+    "song_title": "あなただけ見つめてる",
+    "artist": "大黒摩季",
+    "timestamp": "03:55:00",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 544,
+    "song_title": "マイ フレンド",
+    "artist": "ZARD",
+    "timestamp": "04:05:41",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 545,
+    "song_title": "オレンジ",
+    "artist": "SPYAIR",
+    "timestamp": "04:14:12",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 546,
+    "song_title": "INVOKE",
+    "artist": "T.M.Revolution",
+    "timestamp": "04:23:38",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 547,
+    "song_title": "FIND THE WAY",
+    "artist": "中島美嘉",
+    "timestamp": "04:33:28",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 548,
+    "song_title": "君は僕に似ている",
+    "artist": "See-Saw",
+    "timestamp": "04:40:45",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 549,
+    "song_title": "Believe",
+    "artist": "玉置成実",
+    "timestamp": "04:47:12",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 550,
+    "song_title": "Meteor",
+    "artist": "T.M.Revolution",
+    "timestamp": "04:55:10",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 551,
+    "song_title": "FREEDOM",
+    "artist": "西川貴教with",
+    "timestamp": "05:01:24",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 552,
+    "song_title": "紅蓮華",
+    "artist": "LiSA",
+    "timestamp": "05:09:41",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 553,
+    "song_title": "炎",
+    "artist": "LiSA",
+    "timestamp": "05:17:06",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 554,
+    "song_title": "残響散歌",
+    "artist": "Aimer",
+    "timestamp": "05:26:04",
+    "seconds": 19564
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 555,
+    "song_title": "太陽が昇らない世界",
+    "artist": "Aimer",
+    "timestamp": "05:32:02",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 556,
+    "song_title": "残酷な夜に輝け",
+    "artist": "LiSA",
+    "timestamp": "05:36:36",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 557,
+    "song_title": "残酷な天使のテーゼ",
+    "artist": "高橋洋子",
+    "timestamp": "05:47:54",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 558,
+    "song_title": "魂のルフラン",
+    "artist": "高橋洋子",
+    "timestamp": "05:54:26",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 559,
+    "song_title": "私は最強",
+    "artist": "(ウタ from ONE PIECE FILM RED)/Ado",
+    "timestamp": "06:09:22",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 560,
+    "song_title": "風のゆくえ",
+    "artist": "(ウタ from ONE PIECE FILM RED)/Ado",
+    "timestamp": "06:18:29",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 561,
+    "song_title": "逆光",
+    "artist": "(ウタ from ONE PIECE FILM RED)/Ado",
+    "timestamp": "06:25:36",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 562,
+    "song_title": "新時代",
+    "artist": "(ウタ from ONE PIECE FILM RED)/Ado",
+    "timestamp": "06:33:57",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 563,
+    "song_title": "ウィーアー！",
+    "artist": "きただにひろし",
+    "timestamp": "06:41:17",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 564,
+    "song_title": "ゆずれない願い",
+    "artist": "田村直美",
+    "timestamp": "06:52:34",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 565,
+    "song_title": "光と影を抱きしめたまま",
+    "artist": "田村直美",
+    "timestamp": "07:06:11",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 566,
+    "song_title": "君の知らない物語",
+    "artist": "supercell",
+    "timestamp": "07:15:51",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 567,
+    "song_title": "限界突破×サバイバー",
+    "artist": "氷川きよし",
+    "timestamp": "07:25:49",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 568,
+    "song_title": "気分上々↑↑",
+    "artist": "EIKO starring 96猫、諸葛孔明(CV：置鮎龍太郎)、KABE太人(CV：千葉翔也)、久遠七海 starring Lezel",
+    "timestamp": "07:34:10",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 569,
+    "song_title": "サウンドスケープ",
+    "artist": "TRUE",
+    "timestamp": "07:41:29",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 570,
+    "song_title": "Sincerely",
+    "artist": "TRUE",
+    "timestamp": "07:51:06",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 571,
+    "song_title": "JANE DOE",
+    "artist": "米津玄師×宇多田ヒカル",
+    "timestamp": "08:01:45",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 572,
+    "song_title": "革命道中",
+    "artist": "アイナ・ジ・エンド",
+    "timestamp": "08:07:45",
     "seconds": 0
   },
   {
-    "stream_id": "",
-    "track_no": 352,
-    "song_title": "",
-    "artist": "",
-    "timestamp": "",
+    "stream_id": "S039",
+    "track_no": 573,
+    "song_title": "Days",
+    "artist": "浜崎あゆみ",
+    "timestamp": "08:14:53",
+    "seconds": 0
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 574,
+    "song_title": "secret base 〜君がくれたもの〜",
+    "artist": "ZONE",
+    "timestamp": "08:26:51",
+    "seconds": 0
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 575,
+    "song_title": "硝子の少年",
+    "artist": "KinKi Kids",
+    "timestamp": "09:16:38",
+    "seconds": 0
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 576,
+    "song_title": "明日への扉",
+    "artist": "I WiSH",
+    "timestamp": "09:24:39",
+    "seconds": 0
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 577,
+    "song_title": "TOMORROW",
+    "artist": "岡本真夜",
+    "timestamp": "09:33:09",
+    "seconds": 0
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 578,
+    "song_title": "晩餐歌",
+    "artist": "tuki.",
+    "timestamp": "09:42:23",
+    "seconds": 0
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 579,
+    "song_title": "怪獣の花唄",
+    "artist": "Vaundy",
+    "timestamp": "09:48:38",
+    "seconds": 0
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 580,
+    "song_title": "SAKURA",
+    "artist": "いきものがかり",
+    "timestamp": "09:55:53",
+    "seconds": 0
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 581,
+    "song_title": "Love so sweet",
+    "artist": "嵐",
+    "timestamp": "10:11:18",
+    "seconds": 0
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 582,
+    "song_title": "境界の彼方 - Kyoukai no Kanata -",
+    "artist": "茅原実里",
+    "timestamp": "10:21:36",
+    "seconds": 0
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 583,
+    "song_title": "シカ色デイズ",
+    "artist": "しかのこしかのこしたんたん",
+    "timestamp": "10:30:38",
+    "seconds": 0
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 584,
+    "song_title": "ゲゲゲの鬼太郎",
+    "artist": "熊倉一雄",
+    "timestamp": "10:38:43",
+    "seconds": 0
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 585,
+    "song_title": "Butter-Fly",
+    "artist": "和田光司",
+    "timestamp": "10:45:49",
+    "seconds": 0
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 586,
+    "song_title": "unravel",
+    "artist": "TK from 凛として時雨",
+    "timestamp": "11:01:30",
+    "seconds": 0
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 587,
+    "song_title": "Dearest",
+    "artist": "浜崎あゆみ",
+    "timestamp": "11:11:27",
+    "seconds": 0
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 588,
+    "song_title": "そばかす",
+    "artist": "JUDY AND MARY",
+    "timestamp": "11:25:32",
+    "seconds": 0
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 589,
+    "song_title": "アクエリオン",
+    "artist": "AKINO",
+    "timestamp": "11:33:57",
+    "seconds": 0
+  },
+  {
+    "stream_id": "S039",
+    "track_no": 590,
+    "song_title": "明日の私に幸あれ",
+    "artist": "ナナヲアカリ",
+    "timestamp": "11:44:13",
     "seconds": 0
   }
 ]
