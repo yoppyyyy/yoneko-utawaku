@@ -155,3 +155,15 @@
   - [x] Stats Bar から Unique 列を削除
   - [x] `app.js` の `statUnique` 更新処理を削除
   - [x] フッター権利表記を change-20260413 の文言に更新
+
+### Task 13: UI視認性・スクロール挙動の改修（change-20260415）
+- **ID**: T-13
+- **Priority**: P0
+- **Depends on**: T-3, T-12
+- **Files**: `site/index.html`, `site/css/style.css`
+- **Acceptance Criteria**:
+  - [x] Stats Bar の `.stat-label`（STREAMS / SONGS）を本文色ベースに変更し視認性を上げる（NFR-2.5）
+  - [x] `search-section` と `nav-tabs` を `.sticky-controls` ラッパで包み、`position: sticky; top: 0` でビューポート上端に固定する（NFR-1b）
+  - [x] sticky ラッパは body と同色で不透明化し、下端ボーダーで境界を示す
+  - [x] フッターの `.footer-text` / `.footer-note` を白系（`--neutral-100`）に変更する（NFR-2.6）
+  - [x] `.streams-grid` を `repeat(auto-fill, minmax(230px, 1fr))` + `gap:16px` に変更し、デスクトップ幅で最大4カード/行表示にする（NFR-2.7）

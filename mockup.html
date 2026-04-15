@@ -166,6 +166,29 @@ header {
 }
 
 /* ============================================================
+   STICKY CONTROLS — 検索＋ナビタブの固定ラッパ
+   ============================================================ */
+.sticky-controls {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--neutral-950);
+  padding: 8px 0 10px;
+  margin: 0 -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-bottom: 1px solid var(--neutral-600);
+}
+
+.sticky-controls .search-section {
+  margin: 0 auto 8px;
+}
+
+.sticky-controls .nav-tabs {
+  margin: 0 auto;
+}
+
+/* ============================================================
    SEARCH BAR
    ============================================================ */
 .search-section {
@@ -229,8 +252,8 @@ header {
    ============================================================ */
 .streams-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
   margin-top: 8px;
 }
 
@@ -616,7 +639,8 @@ header {
 
 .stat-label {
   font-size: 11px;
-  color: var(--neutral-600);
+  color: var(--neutral-100);
+  opacity: 0.75;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-top: 2px;
@@ -636,7 +660,7 @@ footer {
 
 .footer-text {
   font-size: 12px;
-  color: var(--neutral-600);
+  color: var(--neutral-100);
   font-family: var(--font-accent);
   font-style: italic;
 }
@@ -648,8 +672,8 @@ footer {
 
 .footer-note {
   font-size: 11px;
-  color: var(--neutral-600);
-  opacity: 0.6;
+  color: var(--neutral-100);
+  opacity: 0.7;
   margin-top: 6px;
 }
 
@@ -768,21 +792,22 @@ footer {
 
   <div class="gothic-divider">✦</div>
 
-  <!-- ==================== SEARCH ==================== -->
-  <div class="search-section">
-    <div class="search-wrapper">
-      <span class="search-icon">🔍</span>
-      <input type="text" class="search-input" id="searchInput"
-             placeholder="曲名・アーティスト名で検索...">
+  <!-- ==================== STICKY: SEARCH + TABS ==================== -->
+  <div class="sticky-controls">
+    <div class="search-section">
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input" id="searchInput"
+               placeholder="曲名・アーティスト名で検索...">
+      </div>
+      <div class="search-results-count" id="searchCount"></div>
     </div>
-    <div class="search-results-count" id="searchCount"></div>
-  </div>
 
-  <!-- ==================== TABS ==================== -->
-  <nav class="nav-tabs">
-    <button class="nav-tab active" data-tab="streams">🎤 歌枠一覧</button>
-    <button class="nav-tab" data-tab="songs">♪ 楽曲一覧</button>
-  </nav>
+    <nav class="nav-tabs">
+      <button class="nav-tab active" data-tab="streams">🎤 歌枠一覧</button>
+      <button class="nav-tab" data-tab="songs">♪ 楽曲一覧</button>
+    </nav>
+  </div>
 
   <!-- ==================== STREAMS TAB ==================== -->
   <div class="tab-content active" id="tab-streams">
