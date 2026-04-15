@@ -5,6 +5,7 @@ let streams = [];
 let setlists = [];
 let songIndex = [];
 let currentSort = 'name';
+let recommendPicks = [];
 
 // ============================================================
 // Utilities
@@ -132,6 +133,74 @@ function toggleSetlist(card) {
 }
 
 // ============================================================
+// Rendering — Recommend (C-9)
+// ============================================================
+function pickRecommendations(n = 3) {
+  const streamsMap = {};
+  streams.forEach(s => { streamsMap[s.stream_id] = s; });
+
+  const pool = setlists
+    .map(item => {
+      const stream = streamsMap[item.stream_id];
+      if (!stream) return null;
+      return {
+        song_title: item.song_title,
+        artist: item.artist,
+        seconds: item.seconds,
+        timestamp: item.timestamp,
+        youtube_url: stream.youtube_url,
+        video_id: stream.video_id || extractVideoId(stream.youtube_url || ''),
+        stream_title: stream.title,
+      };
+    })
+    .filter(Boolean);
+
+  const seen = new Set();
+  const unique = [];
+  for (const item of pool) {
+    const key = `${item.song_title}___${item.artist}`;
+    if (!seen.has(key)) {
+      seen.add(key);
+      unique.push(item);
+    }
+  }
+
+  for (let i = unique.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [unique[i], unique[j]] = [unique[j], unique[i]];
+  }
+  return unique.slice(0, n);
+}
+
+function renderRecommend() {
+  const grid = document.getElementById('recommendGrid');
+  if (!grid) return;
+  if (!recommendPicks.length) {
+    grid.innerHTML = '<div style="color:var(--neutral-600);text-align:center;padding:40px;">おすすめできる曲がありません</div>';
+    return;
+  }
+
+  grid.innerHTML = recommendPicks.map(item => `
+    <div class="recommend-card">
+      <div class="recommend-thumb-wrapper">
+        <img class="recommend-thumbnail"
+             src="https://img.youtube.com/vi/${item.video_id}/mqdefault.jpg"
+             alt=""
+             onerror="this.style.background='linear-gradient(135deg, var(--primary-900), var(--accent-700))'; this.src='';">
+      </div>
+      <div class="recommend-info">
+        <div class="recommend-text">
+          <div class="recommend-song-title">${item.song_title}</div>
+          <div class="recommend-artist">${item.artist}</div>
+        </div>
+        <button class="play-btn" title="この曲から再生"
+                onclick="window.open('${item.youtube_url}&t=${item.seconds}', '_blank')">▶</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ============================================================
 // Rendering — Songs (C-7)
 // ============================================================
 function renderSongs() {
@@ -221,6 +290,11 @@ function handleSearch(query) {
   const activeTab = document.querySelector('.nav-tab.active').dataset.tab;
   const searchCount = document.getElementById('searchCount');
 
+  if (activeTab === 'recommend') {
+    searchCount.textContent = '';
+    return;
+  }
+
   if (activeTab === 'streams') {
     const cards = document.querySelectorAll('.stream-card');
     let count = 0;
@@ -302,8 +376,10 @@ async function init() {
   }
 
   songIndex = buildSongIndex(streams, setlists);
+  recommendPicks = pickRecommendations(3);
 
   updateStats();
+  renderRecommend();
   renderStreams();
   renderSongs();
   initTabs();

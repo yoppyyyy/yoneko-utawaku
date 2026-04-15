@@ -45,13 +45,21 @@
     </div>
 
     <nav class="nav-tabs">
-      <button class="nav-tab active" data-tab="streams">🎤 歌枠一覧</button>
+      <button class="nav-tab active" data-tab="recommend">✨ おすすめ曲（ランダム再生）</button>
+      <button class="nav-tab" data-tab="streams">🎤 歌枠一覧</button>
       <button class="nav-tab" data-tab="songs">♪ 楽曲一覧</button>
     </nav>
   </div>
 
+  <!-- ==================== RECOMMEND TAB (C-9) ==================== -->
+  <div class="tab-content active" id="tab-recommend">
+    <div class="recommend-grid" id="recommendGrid">
+      <!-- JS が動的に生成 -->
+    </div>
+  </div>
+
   <!-- ==================== STREAMS TAB (C-5, C-6) ==================== -->
-  <div class="tab-content active" id="tab-streams">
+  <div class="tab-content" id="tab-streams">
     <div class="streams-grid" id="streamsGrid">
       <!-- JS が動的に生成 -->
     </div>

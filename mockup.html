@@ -135,7 +135,7 @@ header {
   justify-content: center;
   gap: 4px;
   margin: 24px auto 0;
-  max-width: 500px;
+  max-width: 600px;
   background: var(--neutral-900);
   border-radius: var(--radius-lg);
   padding: 4px;
@@ -155,6 +155,7 @@ header {
   cursor: pointer;
   transition: all 0.3s ease;
   opacity: 0.6;
+  white-space: nowrap;
 }
 
 .nav-tab:hover { opacity: 0.85; }
@@ -439,6 +440,87 @@ header {
   background: var(--gold-300);
   transform: scale(1.12);
   box-shadow: 0 4px 16px rgba(212,168,83,0.4);
+}
+
+/* ============================================================
+   RECOMMEND — おすすめ曲（ランダム再生）
+   ============================================================ */
+.recommend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.recommend-card {
+  background: var(--neutral-900);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--neutral-600);
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInUp 0.5s ease both;
+}
+
+.recommend-card:hover {
+  border-color: var(--primary-500);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(123,82,160,0.15), 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.recommend-thumb-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.recommend-thumbnail {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+
+.recommend-thumb-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(transparent, var(--neutral-900));
+  pointer-events: none;
+}
+
+.recommend-info {
+  padding: 14px 16px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.recommend-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.recommend-song-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gold-100);
+  line-height: 1.4;
+}
+
+.recommend-artist {
+  font-size: 12px;
+  color: var(--gold-100);
+  opacity: 0.7;
+  margin-top: 2px;
+}
+
+.recommend-card .play-btn {
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+  flex-shrink: 0;
 }
 
 /* ============================================================
@@ -804,13 +886,14 @@ footer {
     </div>
 
     <nav class="nav-tabs">
-      <button class="nav-tab active" data-tab="streams">🎤 歌枠一覧</button>
+      <button class="nav-tab active" data-tab="recommend">✨ おすすめ曲（ランダム再生）</button>
+      <button class="nav-tab" data-tab="streams">🎤 歌枠一覧</button>
       <button class="nav-tab" data-tab="songs">♪ 楽曲一覧</button>
     </nav>
   </div>
 
   <!-- ==================== STREAMS TAB ==================== -->
-  <div class="tab-content active" id="tab-streams">
+  <div class="tab-content" id="tab-streams">
     <div class="streams-grid" id="streamsGrid">
 
       <!-- Card 1 -->
@@ -978,6 +1061,55 @@ footer {
               <span style="font-size:12px; color:var(--neutral-600); font-style:italic;">… 他 41 曲</span>
             </div>
           </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== RECOMMEND TAB ==================== -->
+  <div class="tab-content active" id="tab-recommend">
+    <div class="recommend-grid" id="recommendGrid">
+
+      <div class="recommend-card">
+        <div class="recommend-thumb-wrapper">
+          <img class="recommend-thumbnail" src="https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg" alt="">
+        </div>
+        <div class="recommend-info">
+          <div class="recommend-text">
+            <div class="recommend-song-title">桜</div>
+            <div class="recommend-artist">コブクロ</div>
+          </div>
+          <button class="play-btn" title="この曲から再生"
+                  onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=765','_blank')">▶</button>
+        </div>
+      </div>
+
+      <div class="recommend-card">
+        <div class="recommend-thumb-wrapper">
+          <img class="recommend-thumbnail" src="https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg" alt="">
+        </div>
+        <div class="recommend-info">
+          <div class="recommend-text">
+            <div class="recommend-song-title">Pretender</div>
+            <div class="recommend-artist">Official髭男dism</div>
+          </div>
+          <button class="play-btn" title="この曲から再生"
+                  onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=1830','_blank')">▶</button>
+        </div>
+      </div>
+
+      <div class="recommend-card">
+        <div class="recommend-thumb-wrapper">
+          <img class="recommend-thumbnail" src="https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg" alt="">
+        </div>
+        <div class="recommend-info">
+          <div class="recommend-text">
+            <div class="recommend-song-title">炎</div>
+            <div class="recommend-artist">LiSA</div>
+          </div>
+          <button class="play-btn" title="この曲から再生"
+                  onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=2940','_blank')">▶</button>
         </div>
       </div>
 

@@ -167,3 +167,18 @@
   - [x] sticky ラッパは body と同色で不透明化し、下端ボーダーで境界を示す
   - [x] フッターの `.footer-text` / `.footer-note` を白系（`--neutral-100`）に変更する（NFR-2.6）
   - [x] `.streams-grid` を `repeat(auto-fill, minmax(230px, 1fr))` + `gap:16px` に変更し、デスクトップ幅で最大4カード/行表示にする（NFR-2.7）
+
+### Task 14: おすすめ曲（ランダム再生）タブ追加（change-20260415b）
+- **ID**: T-14
+- **Priority**: P1
+- **Depends on**: T-6, T-9
+- **Files**: `mockup.html`, `site/index.html`, `site/css/style.css`, `site/js/app.js`
+- **Acceptance Criteria**:
+  - [x] ナビタブに「おすすめ曲（ランダム再生）」を追加（`data-tab="recommend"`、初期activeで先頭配置）
+  - [x] `#tab-recommend` コンテナと `.recommend-grid` を用意
+  - [x] `app.js` で初回ロード時に `setlists` から重複なし3件を抽選（`pickRecommendations()`）し、モジュール変数 `recommendPicks` に保持
+  - [x] `renderRecommend()` で各カードにサムネ・曲名（`--gold-100`）・アーティスト（`--gold-100` / 低opacity）・再生ボタンを描画
+  - [x] 再生ボタン押下で `youtube_url?t=秒数` を新タブで開く
+  - [x] タブ切替では再抽選せず、ページリロード時のみ更新される
+  - [x] 検索ボックスはおすすめタブでは非アクティブ（ヒット件数表示クリア）
+  - [x] `.nav-tabs` max-width を検索バーと同じ 600px に揃え、`.nav-tab` に `white-space: nowrap`

@@ -102,6 +102,21 @@
 - モバイルではテーブルをカード風レイアウトに変換（`thead` 非表示、`tr` を `flex-wrap`）
 - 対応FR: FR-3.1, FR-3.2, FR-3.3, FR-4.1, FR-4.2
 
+### C-9: Recommend Tab（おすすめ曲 / ランダム再生）
+
+- ナビタブに「おすすめ曲（ランダム再生）」を追加（`data-tab="recommend"`）
+- 初期化時に全 `setlists` 行から重複なしで3件をランダムに選出し、ページのライフタイム中は固定する
+  - `recommendPicks` をモジュールスコープに保持。タブ切替では再抽選しない
+  - 複数回歌われている曲の場合は `appearances` から1つをランダムに選ぶ
+- カード構成:
+  - 配信サムネ（`img.youtube.com/vi/{video_id}/mqdefault.jpg`）
+  - 曲名（`--gold-100`、`.stream-title` と同じ配色）
+  - アーティスト名（`--gold-100`、やや小さめ／低 opacity）
+  - 大きな再生ボタン（`play-btn` と同配色）→ クリックで `youtube_url?t=秒数` を新タブで開く
+  - カード自体のクリックハンドラは持たない（再生ボタンのみ能動要素）
+- レイアウトは `.recommend-grid` で `repeat(auto-fill, minmax(260px, 1fr))`、`gap:16px`
+- 対応FR: FR-8.1 〜 FR-8.6
+
 ### C-8: Footer
 
 - 権利表記（2行。ヘッダーと重複する「本サイトは非公式…」は含めない）:
