@@ -3,3 +3,4 @@ data/
 .env
 site/data
 scripts/fetch-youtube/utawaku_list.csv
+reference/
