@@ -84,21 +84,25 @@
 - 配信タイトル
 - 曲数表示
 - クリックで展開 → セットリスト（C-6）を表示
-- 新しい配信順で表示
-- 対応FR: FR-2.1, FR-2.2, FR-2.3, FR-5.1, FR-5.2
+- ソートボタン: 新しい順 / 古い順（楽曲一覧タブと同じ `.sort-btn` スタイルを流用。配置は歌枠グリッド直上、`.streams-header` 等のヘッダ領域）
+- 初期ソートは「新しい順」（`.sort-btn[data-sort="new"]` に `.active`）
+- 対応FR: FR-2.1, FR-2.2, FR-2.3, FR-2.4, FR-5.1, FR-5.2
 
 ### C-6: Setlist（セットリスト展開）
 
-- 曲番号 / 曲名 / アーティスト / タイムスタンプ / 再生ボタン
+- 曲名 / アーティスト / タイムスタンプ / 再生ボタン
+- 曲順番号（`track_no`）および内部ID（`stream_id` 等）は表示しない（FR-2.5）
+- 並び順は `track_no` 昇順で固定（番号自体は非表示、順序のみ使用）
 - `max-height` アニメーションで展開/折りたたみ
 - 再生ボタンクリック → YouTube `?t=秒数` で新タブ
-- 対応FR: FR-4.1, FR-4.2
+- 対応FR: FR-2.5, FR-4.1, FR-4.2
 
 ### C-7: Songs Table（楽曲一覧テーブル）
 
 - カラム: 曲名 / アーティスト / 歌唱回数 / 最新歌唱日
-- ソートボタン: 曲名順 / 回数順 / 最新日順
-- 行クリックで展開 → 歌唱された配信の一覧（日付・配信名・タイムスタンプ・再生ボタン）
+- ソートボタン: 最新順 / 歌唱回数順 / 曲名順（左からこの順で配置）
+- 初期ソートは「最新順」（`.sort-btn[data-sort="date"]` に `.active`、`currentSort = 'date'`）
+- 行クリックで展開 → 歌唱された配信の一覧（配信日・配信タイトル・タイムスタンプ・再生ボタン）
 - モバイルではテーブルをカード風レイアウトに変換（`thead` 非表示、`tr` を `flex-wrap`）
 - 対応FR: FR-3.1, FR-3.2, FR-3.3, FR-4.1, FR-4.2
 
@@ -290,10 +294,11 @@ scripts/
 |---------------|------|
 | `init()` | JSON fetch、データ構築、初期描画 |
 | `buildSongIndex(streams, setlists)` | songIndex構築 |
-| `renderStreams(streams, setlists)` | 歌枠カードのDOM生成 |
-| `renderSongs(songIndex)` | 楽曲テーブルのDOM生成 |
+| `renderStreams(streams, setlists)` | 歌枠カードのDOM生成（`currentStreamSort` の順で並び替え） |
+| `renderSongs(songIndex)` | 楽曲テーブルのDOM生成（`currentSort` の順で並び替え） |
 | `handleSearch(query)` | 検索フィルタリング |
-| `handleSort(key)` | ソート切り替え |
+| `handleSort(key)` | 楽曲一覧ソート切り替え（初期値 `'date'`） |
+| `handleStreamSort(key)` | 歌枠一覧ソート切り替え（`'new'` / `'old'`、初期値 `'new'`） |
 | `toggleSetlist(card)` | カード展開/折りたたみ |
 | `toggleSongDetail(row)` | 楽曲詳細展開/折りたたみ |
 | `updateStats(streams, songIndex)` | Stats Bar更新 |

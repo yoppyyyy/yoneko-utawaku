@@ -182,3 +182,21 @@
   - [x] タブ切替では再抽選せず、ページリロード時のみ更新される
   - [x] 検索ボックスはおすすめタブでは非アクティブ（ヒット件数表示クリア）
   - [x] `.nav-tabs` max-width を検索バーと同じ 600px に揃え、`.nav-tab` に `white-space: nowrap`
+
+## Wave 6 — ソート・表示仕様の改修
+
+### Task 15: 歌枠／楽曲一覧のソート仕様改修（change-20260418）
+- **ID**: T-15
+- **Priority**: P0
+- **Depends on**: T-7, T-8
+- **Files**: `site/index.html`, `site/css/style.css`, `site/js/app.js`
+- **対応FR**: FR-2.4, FR-2.5, FR-3.3
+- **Acceptance Criteria**:
+  - [x] **楽曲一覧 初期ソート変更**: `app.js` の `currentSort` の初期値を `'name'` から `'date'`（最新順）に変更する
+  - [x] **楽曲一覧 ボタン配置変更**: `site/index.html` の `.sort-controls` 内のボタンを左から「最新順 (`data-sort="date"`) / 歌唱回数 (`data-sort="count"`) / 曲名順 (`data-sort="name"`)」の順に並べ替え、`active` クラスを最新順ボタンに付与する
+  - [x] **歌枠一覧 ソートボタン追加**: `site/index.html` の `#tab-streams` 内、`.streams-grid` の直上に `.streams-header > .sort-controls` を追加し、「新しい順 (`data-sort="new"`) / 古い順 (`data-sort="old"`)」の2ボタンを配置する
+  - [x] **歌枠一覧 ソートロジック追加**: `app.js` に `currentStreamSort`（初期値 `'new'`）、`handleStreamSort(key)`、`sortStreams(list, key)` を追加する。`renderStreams()` は `sortStreams(streams, currentStreamSort)` の結果を描画する
+  - [x] **歌枠一覧 初期アクティブ**: 「新しい順」ボタンに `active` クラスを付与し、既定で日付降順表示にする（従来挙動の維持）
+  - [x] **sort-btn 初期化範囲**: 既存の `initSort()` は `.songs-header .sort-btn` のみを対象とするよう限定し、歌枠用は `initStreamSort()` として別途登録する（片方の押下で他方が `active` を失わないこと）
+  - [x] **歌枠セットリスト展開時の曲順番号非表示**: `renderStreams()` が生成する `.setlist-item` から `<span class="setlist-no">${item.track_no}</span>` を削除する。`site/css/style.css` から `.setlist-no` 関連のスタイルも整理する（不要なら削除）。並び順は `track_no` 昇順のまま維持し、番号自体のみ非表示にする
+  - [x] **動作確認**: ローカルで静的サーバを起動し、(1) 楽曲一覧を開くと最新順で表示、(2) ソートボタンを曲名順→回数順→最新順に切り替えて並びが更新、(3) 歌枠一覧を開くと新しい順で表示、(4) 「古い順」押下で昇順に切替、(5) 歌枠カードを展開したときにセットリストに曲順番号が表示されない、ことを確認する

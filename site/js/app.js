@@ -4,7 +4,8 @@
 let streams = [];
 let setlists = [];
 let songIndex = [];
-let currentSort = 'name';
+let currentSort = 'date';
+let currentStreamSort = 'new';
 let recommendPicks = [];
 
 // ============================================================
@@ -79,9 +80,17 @@ function updateStats() {
 // ============================================================
 // Rendering — Streams (C-5, C-6)
 // ============================================================
+function sortStreams(list, key) {
+  const arr = [...list];
+  if (key === 'old') {
+    return arr.sort((a, b) => a.date.localeCompare(b.date));
+  }
+  return arr.sort((a, b) => b.date.localeCompare(a.date));
+}
+
 function renderStreams() {
   const grid = document.getElementById('streamsGrid');
-  const sorted = [...streams].sort((a, b) => b.date.localeCompare(a.date));
+  const sorted = sortStreams(streams, currentStreamSort);
 
   grid.innerHTML = sorted.map(stream => {
     const videoId = stream.video_id || extractVideoId(stream.youtube_url || '');
@@ -92,7 +101,6 @@ function renderStreams() {
 
     const setlistHtml = streamSetlist.map(item => `
       <div class="setlist-item">
-        <span class="setlist-no">${item.track_no}</span>
         <div class="setlist-song">
           <div class="setlist-song-title">${item.song_title}</div>
           <div class="setlist-artist">${item.artist}</div>
@@ -253,10 +261,19 @@ function sortSongIndex(index, key) {
 
 function handleSort(key) {
   currentSort = key;
-  document.querySelectorAll('.sort-btn').forEach(btn => {
+  document.querySelectorAll('.songs-header .sort-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.sort === key);
   });
   renderSongs();
+}
+
+function handleStreamSort(key) {
+  currentStreamSort = key;
+  document.querySelectorAll('.streams-header .sort-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.streamSort === key);
+  });
+  renderStreams();
+  handleSearch(document.getElementById('searchInput').value);
 }
 
 function toggleSongDetail(row) {
@@ -354,8 +371,14 @@ function initSearch() {
 // Sort buttons
 // ============================================================
 function initSort() {
-  document.querySelectorAll('.sort-btn').forEach(btn => {
+  document.querySelectorAll('.songs-header .sort-btn').forEach(btn => {
     btn.addEventListener('click', () => handleSort(btn.dataset.sort));
+  });
+}
+
+function initStreamSort() {
+  document.querySelectorAll('.streams-header .sort-btn').forEach(btn => {
+    btn.addEventListener('click', () => handleStreamSort(btn.dataset.streamSort));
   });
 }
 
@@ -385,6 +408,7 @@ async function init() {
   initTabs();
   initSearch();
   initSort();
+  initStreamSort();
 }
 
 init();

@@ -61,6 +61,12 @@
 
   <!-- ==================== STREAMS TAB (C-5, C-6) ==================== -->
   <div class="tab-content" id="tab-streams">
+    <div class="streams-header">
+      <div class="sort-controls">
+        <button class="sort-btn active" data-stream-sort="new">新しい順</button>
+        <button class="sort-btn" data-stream-sort="old">古い順</button>
+      </div>
+    </div>
     <div class="streams-grid" id="streamsGrid">
       <!-- JS が動的に生成 -->
     </div>
@@ -71,9 +77,9 @@
     <div class="songs-header">
       <h2>All Songs</h2>
       <div class="sort-controls">
-        <button class="sort-btn active" data-sort="name">曲名順</button>
+        <button class="sort-btn active" data-sort="date">最新順</button>
         <button class="sort-btn" data-sort="count">歌唱回数</button>
-        <button class="sort-btn" data-sort="date">最新順</button>
+        <button class="sort-btn" data-sort="name">曲名順</button>
       </div>
     </div>
     <table class="songs-table" id="songsTable">

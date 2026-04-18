@@ -373,14 +373,6 @@ header {
   border-radius: 4px;
 }
 
-.setlist-no {
-  font-family: var(--font-body);
-  font-size: 14px;
-  color: var(--c-muted);
-  min-width: 24px;
-  text-align: right;
-}
-
 .setlist-song {
   flex: 1;
   min-width: 0;
@@ -518,13 +510,18 @@ header {
 /* ============================================================
    SONGS TABLE — 楽曲一覧
    ============================================================ */
-.songs-header {
+.songs-header,
+.streams-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.streams-header {
+  justify-content: flex-end;
 }
 
 .songs-header h2 {
