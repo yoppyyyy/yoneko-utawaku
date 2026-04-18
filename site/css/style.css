@@ -61,6 +61,7 @@ body {
   line-height: 1.5;
   min-height: 100vh;
   overflow-x: hidden;
+  padding-bottom: 80px;
 }
 
 /* ============================================================
@@ -520,11 +521,8 @@ header {
   gap: 12px;
 }
 
-.streams-header {
-  justify-content: flex-end;
-}
-
-.songs-header h2 {
+.songs-header h2,
+.streams-header h2 {
   font-family: var(--font-display);
   font-size: 24px;
   font-weight: 700;
@@ -729,12 +727,15 @@ header {
    FOOTER
    ============================================================ */
 footer {
-  margin-top: 60px;
-  padding: 24px 0;
+  padding: 12px 20px;
   text-align: center;
   border-top: 1px solid rgba(255,255,255,0.1);
-  position: relative;
-  z-index: 1;
+  background: var(--c-bg);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
 }
 
 .footer-text {
