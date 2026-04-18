@@ -185,6 +185,18 @@
 
 ## Wave 6 — ソート・表示仕様の改修
 
+### Task 16: おすすめタブで検索セクションを非表示に（change-20260418b）
+- **ID**: T-16
+- **Priority**: P1
+- **Depends on**: T-14
+- **Files**: `site/js/app.js`
+- **対応FR**: FR-8.7
+- **Acceptance Criteria**:
+  - [x] `updateSearchVisibility(tabName)` を追加し、`tabName === 'recommend'` のとき `.search-section` を `display: none` にする
+  - [x] 他タブ（streams / songs）に切り替えたら `.search-section` を再表示する
+  - [x] 初期ロード時（recommend が既定アクティブ）も `.search-section` が非表示の状態で描画する
+  - [x] ナビタブ（`.nav-tabs`）は引き続き表示されることを確認
+
 ### Task 15: 歌枠／楽曲一覧のソート仕様改修（change-20260418）
 - **ID**: T-15
 - **Priority**: P0

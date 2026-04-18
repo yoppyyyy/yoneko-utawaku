@@ -287,6 +287,12 @@ function toggleSongDetail(row) {
 // ============================================================
 // Tab Switching (C-4)
 // ============================================================
+function updateSearchVisibility(tabName) {
+  const section = document.querySelector('.search-section');
+  if (!section) return;
+  section.style.display = tabName === 'recommend' ? 'none' : '';
+}
+
 function initTabs() {
   document.querySelectorAll('.nav-tab').forEach(tab => {
     tab.addEventListener('click', () => {
@@ -294,9 +300,12 @@ function initTabs() {
       document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
       tab.classList.add('active');
       document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+      updateSearchVisibility(tab.dataset.tab);
       handleSearch(document.getElementById('searchInput').value);
     });
   });
+  const activeTab = document.querySelector('.nav-tab.active');
+  if (activeTab) updateSearchVisibility(activeTab.dataset.tab);
 }
 
 // ============================================================
