@@ -73,7 +73,7 @@ npm run fetch
 ln -sf ../data site/data
 
 # サーバ起動
-python3 -m http.server 8000
+npx serve -l 8000
 ```
 
 ブラウザで http://localhost:8000/site/ を開きます。
