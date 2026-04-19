@@ -2,7 +2,7 @@ name: Fetch data & Deploy to GitHub Pages
 
 on:
   schedule:
-    - cron: '0 * * * *'  # 毎時
+    - cron: '* 0 * * *'    # Daily
   workflow_dispatch:       # 手動トリガー
 
 env:

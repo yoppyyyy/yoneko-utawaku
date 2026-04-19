@@ -70,6 +70,7 @@ body {
   line-height: 1.5;
   min-height: 100vh;
   overflow-x: hidden;
+  padding-bottom: 80px;
 }
 
 /* ============================================================
@@ -529,7 +530,8 @@ header {
 /* ============================================================
    SONGS TABLE — 楽曲一覧
    ============================================================ */
-.songs-header {
+.songs-header,
+.streams-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -538,7 +540,8 @@ header {
   gap: 12px;
 }
 
-.songs-header h2 {
+.songs-header h2,
+.streams-header h2 {
   font-family: var(--font-display);
   font-size: 24px;
   font-weight: 700;
@@ -743,12 +746,15 @@ header {
    FOOTER
    ============================================================ */
 footer {
-  margin-top: 60px;
-  padding: 24px 0;
+  padding: 12px 20px;
   text-align: center;
   border-top: 1px solid rgba(255,255,255,0.1);
-  position: relative;
-  z-index: 1;
+  background: var(--c-bg);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
 }
 
 .footer-text {
@@ -866,7 +872,7 @@ footer {
   <!-- ==================== HEADER ==================== -->
   <header>
     <div class="site-title">夜猫歌枠あーかいぶ</div>
-    <div class="site-subtitle">Pastel Live所属　夜猫アヤさんの歌枠を検索できるサイトです。</div>
+    <div class="site-subtitle">Pastel Live所属　夜猫アヤさんの歌枠を検索できるサイトです。再生ボタンでyoutubeの動画にジャンプできます。</div>
     <div class="site-meta">このサイトは非公式のファンサイトです。</div>
   </header>
 
@@ -904,6 +910,9 @@ footer {
 
   <!-- ==================== STREAMS TAB ==================== -->
   <div class="tab-content" id="tab-streams">
+    <div class="streams-header">
+      <h2>Stream</h2>
+    </div>
     <div class="streams-grid" id="streamsGrid">
 
       <!-- Card 1 -->
