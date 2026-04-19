@@ -6,38 +6,23 @@
   --c-bg:      #121212;
   --c-surface: #181818;
   --c-surface-raised: #1f1f1f;
-  --c-surface-sunken: #0a0a0a;
   --c-accent:  #1ed760;  /* Spotify Green — functional only */
   --c-text:    #ffffff;
   --c-muted:   #b3b3b3;
   --c-border:  #4d4d4d;
-  --c-border-light: #7c7c7c;
 
   /* Semantic aliases */
   --primary-900: var(--c-bg);
-  --primary-700: rgba(30, 215, 96, 0.15);
-  --primary-500: var(--c-accent);
-  --primary-300: var(--c-muted);
-  --primary-100: var(--c-text);
 
   --accent-700: var(--c-accent);
-  --accent-500: var(--c-accent);
-  --accent-300: var(--c-muted);
-
-  --gold-500: var(--c-accent);
-  --gold-300: var(--c-accent);
-  --gold-100: var(--c-text);
 
   --neutral-950: var(--c-bg);
-  --neutral-900: var(--c-surface);
-  --neutral-800: var(--c-surface-sunken);
   --neutral-600: var(--c-border);
   --neutral-100: var(--c-text);
 
   /* Fonts */
   --font-display: 'Cinzel', serif;
   --font-body: 'Zen Kaku Gothic New', sans-serif;
-  --font-accent: 'Cormorant Garamond', serif;
 
   /* Border Radius — pill & circle geometry */
   --radius-sm: 6px;
@@ -63,12 +48,6 @@ body {
   overflow-x: hidden;
   padding-bottom: 80px;
 }
-
-/* ============================================================
-   BACKGROUND TEXTURE
-   ============================================================ */
-body::before { content: none; }
-body::after  { content: none; }
 
 /* ============================================================
    LAYOUT
@@ -742,11 +721,6 @@ footer {
   font-size: 12px;
   color: var(--c-muted);
   font-family: var(--font-body);
-}
-
-.footer-text a {
-  color: var(--c-accent);
-  text-decoration: none;
 }
 
 .footer-note {
