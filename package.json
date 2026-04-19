@@ -4,7 +4,8 @@
   "description": "VTuber歌枠セットリスト検索ファンサイト",
   "private": true,
   "scripts": {
-    "fetch": "node scripts/fetch-sheets/fetch-sheets.js"
+    "fetch": "node scripts/fetch-sheets/fetch-sheets.js",
+    "fetch-youtube": "node scripts/fetch-youtube/fetch-youtube.js"
   },
   "dependencies": {
     "dotenv": "^16.4.0",

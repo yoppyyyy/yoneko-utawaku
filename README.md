@@ -26,7 +26,7 @@ Pastel Live所属・夜猫アヤさんの歌枠配信セットリストを検索
 │   ├── fetch-sheets/        # 本番パイプライン
 │   │   └── fetch-sheets.js  # Google Sheets → data/*.json
 │   └── fetch-youtube/       # 運用補助ツール（ローカル実行）
-│       ├── fetch_utawaku.py # YouTube Data API → CSV
+│       ├── fetch-youtube.js # YouTube Data API → CSV
 │       └── .env             # API_KEY, CHANNEL_ID（コミットしない）
 ├── data/                    # 生成物（.gitignore）
 │   ├── streams.json
@@ -43,7 +43,6 @@ Pastel Live所属・夜猫アヤさんの歌枠配信セットリストを検索
 
 ### 必要環境
 - Node.js 24+
-- Python 3.10+（補助スクリプトを使う場合のみ）
 
 ### インストール
 ```bash
@@ -86,9 +85,7 @@ python3 -m http.server 8000
 本番パイプラインには組み込まれていません。
 
 ### 準備
-```bash
-pip install google-api-python-client python-dotenv
-```
+依存関係は `npm install` で導入済み（`googleapis`, `dotenv` を共有）。
 
 `scripts/fetch-youtube/.env` を作成:
 ```
@@ -98,8 +95,7 @@ CHANNEL_ID=<対象チャンネルID (UCxxxx...)>
 
 ### 実行
 ```bash
-cd scripts/fetch-youtube
-python3 fetch_utawaku.py
+npm run fetch-youtube
 ```
 
 出力: `utawaku_list.csv`（配信日・タイトル・URL・概要、配信日昇順）
