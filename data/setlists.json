@@ -6030,5 +6030,109 @@
     "artist": "高橋洋子",
     "timestamp": "03:02:31",
     "seconds": 10951
+  },
+  {
+    "stream_id": "S042",
+    "track_no": 755,
+    "song_title": "うれしい！たのしい！大好き！",
+    "artist": "DREAMS COME TRUE",
+    "timestamp": "00:06:33",
+    "seconds": 393
+  },
+  {
+    "stream_id": "S042",
+    "track_no": 756,
+    "song_title": "決戦は金曜日",
+    "artist": "DREAMS COME TRUE",
+    "timestamp": "00:14:23",
+    "seconds": 863
+  },
+  {
+    "stream_id": "S042",
+    "track_no": 757,
+    "song_title": "Femme Fatale",
+    "artist": "ヒプノシスマイク -D.R.B- (中王区 言の葉党)",
+    "timestamp": "00:24:41",
+    "seconds": 1481
+  },
+  {
+    "stream_id": "S042",
+    "track_no": 758,
+    "song_title": "空色デイズ",
+    "artist": "中川翔子",
+    "timestamp": "00:30:57",
+    "seconds": 1857
+  },
+  {
+    "stream_id": "S042",
+    "track_no": 759,
+    "song_title": "零-zero-",
+    "artist": "tuki.",
+    "timestamp": "00:43:09",
+    "seconds": 2589
+  },
+  {
+    "stream_id": "S042",
+    "track_no": 760,
+    "song_title": "DreamRiser",
+    "artist": "ChouCho",
+    "timestamp": "00:49:19",
+    "seconds": 2959
+  },
+  {
+    "stream_id": "S042",
+    "track_no": 761,
+    "song_title": "少女レイ",
+    "artist": "みきとP feat.初音ミク",
+    "timestamp": "00:54:16",
+    "seconds": 3256
+  },
+  {
+    "stream_id": "S042",
+    "track_no": 762,
+    "song_title": "secret base 〜君がくれたもの〜",
+    "artist": "ZONE",
+    "timestamp": "01:06:30",
+    "seconds": 3990
+  },
+  {
+    "stream_id": "S042",
+    "track_no": 763,
+    "song_title": "ルミナス - Luminous",
+    "artist": "アイナ・ジ・エンド",
+    "timestamp": "01:15:25",
+    "seconds": 4525
+  },
+  {
+    "stream_id": "S042",
+    "track_no": 764,
+    "song_title": "飛ぶ時",
+    "artist": "Vaundy",
+    "timestamp": "01:21:45",
+    "seconds": 4905
+  },
+  {
+    "stream_id": "S042",
+    "track_no": 765,
+    "song_title": "恋におちたら",
+    "artist": "Crystal Kay",
+    "timestamp": "01:31:33",
+    "seconds": 5493
+  },
+  {
+    "stream_id": "S042",
+    "track_no": 766,
+    "song_title": "fragile",
+    "artist": "Every Little Thing",
+    "timestamp": "01:46:00",
+    "seconds": 6360
+  },
+  {
+    "stream_id": "S042",
+    "track_no": 767,
+    "song_title": "君じゃなきゃダメみたい",
+    "artist": "オーイシマサヨシ",
+    "timestamp": "01:54:57",
+    "seconds": 6897
   }
 ]
