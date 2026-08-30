@@ -3506,7 +3506,7 @@
   {
     "stream_id": "S026",
     "track_no": 439,
-    "song_title": "夏まつり",
+    "song_title": "夏祭り",
     "artist": "Whiteberry",
     "timestamp": "00:16:00",
     "seconds": 960
@@ -6398,5 +6398,109 @@
     "artist": "浜崎あゆみ",
     "timestamp": "01:57:47",
     "seconds": 7067
+  },
+  {
+    "stream_id": "S045",
+    "track_no": 801,
+    "song_title": "夏色",
+    "artist": "ゆず",
+    "timestamp": "00:05:59",
+    "seconds": 359
+  },
+  {
+    "stream_id": "S045",
+    "track_no": 802,
+    "song_title": "マリーゴールド",
+    "artist": "あいみょん",
+    "timestamp": "00:17:39",
+    "seconds": 1059
+  },
+  {
+    "stream_id": "S045",
+    "track_no": 803,
+    "song_title": "少女レイ",
+    "artist": "みきとP feat.初音ミク",
+    "timestamp": "00:26:32",
+    "seconds": 1592
+  },
+  {
+    "stream_id": "S045",
+    "track_no": 804,
+    "song_title": "波乗りジョニー",
+    "artist": "サザンオールスターズ",
+    "timestamp": "00:34:14",
+    "seconds": 2054
+  },
+  {
+    "stream_id": "S045",
+    "track_no": 805,
+    "song_title": "HOT LIMIT",
+    "artist": "T.M.Revolution",
+    "timestamp": "00:41:38",
+    "seconds": 2498
+  },
+  {
+    "stream_id": "S045",
+    "track_no": 806,
+    "song_title": "君がくれた夏",
+    "artist": "家入レオ",
+    "timestamp": "00:48:43",
+    "seconds": 2923
+  },
+  {
+    "stream_id": "S045",
+    "track_no": 807,
+    "song_title": "青と夏",
+    "artist": "Mrs. GREEN APPLE",
+    "timestamp": "01:01:11",
+    "seconds": 3671
+  },
+  {
+    "stream_id": "S045",
+    "track_no": 808,
+    "song_title": "夏祭り",
+    "artist": "Whiteberry",
+    "timestamp": "01:10:20",
+    "seconds": 4220
+  },
+  {
+    "stream_id": "S045",
+    "track_no": 809,
+    "song_title": "HANABI",
+    "artist": "Mr.Children",
+    "timestamp": "01:23:29",
+    "seconds": 5009
+  },
+  {
+    "stream_id": "S045",
+    "track_no": 810,
+    "song_title": "花火",
+    "artist": "aiko",
+    "timestamp": "01:34:56",
+    "seconds": 5696
+  },
+  {
+    "stream_id": "S045",
+    "track_no": 811,
+    "song_title": "TSUNAMI",
+    "artist": "サザンオールスターズ",
+    "timestamp": "01:41:18",
+    "seconds": 6078
+  },
+  {
+    "stream_id": "S045",
+    "track_no": 812,
+    "song_title": "Everyday、カチューシャ",
+    "artist": "AKB48",
+    "timestamp": "01:51:22",
+    "seconds": 6682
+  },
+  {
+    "stream_id": "S045",
+    "track_no": 813,
+    "song_title": "secret base 〜君がくれたもの〜",
+    "artist": "ZONE",
+    "timestamp": "01:59:00",
+    "seconds": 7140
   }
 ]
