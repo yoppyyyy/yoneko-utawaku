@@ -2218,7 +2218,7 @@
   {
     "stream_id": "S015",
     "track_no": 278,
-    "song_title": "煌めく瞬間に捕らわれて",
+    "song_title": "煌めく瞬間に捕われて",
     "artist": "MANISH",
     "timestamp": "01:02:34",
     "seconds": 3754
@@ -6502,5 +6502,125 @@
     "artist": "ZONE",
     "timestamp": "01:59:00",
     "seconds": 7140
+  },
+  {
+    "stream_id": "S046",
+    "track_no": 814,
+    "song_title": "HOT LIMIT",
+    "artist": "T.M.Revolution",
+    "timestamp": "00:17:22",
+    "seconds": 1042
+  },
+  {
+    "stream_id": "S046",
+    "track_no": 815,
+    "song_title": "JANE DOE",
+    "artist": "米津玄師×宇多田ヒカル",
+    "timestamp": "00:31:56",
+    "seconds": 1916
+  },
+  {
+    "stream_id": "S046",
+    "track_no": 816,
+    "song_title": "ほんまやで☆なんでやねん☆しらんけど",
+    "artist": "モナキ",
+    "timestamp": "00:42:20",
+    "seconds": 2540
+  },
+  {
+    "stream_id": "S046",
+    "track_no": 817,
+    "song_title": "モノクロのキス",
+    "artist": "シド",
+    "timestamp": "00:52:53",
+    "seconds": 3173
+  },
+  {
+    "stream_id": "S046",
+    "track_no": 818,
+    "song_title": "Best Friend",
+    "artist": "西野カナ",
+    "timestamp": "01:00:46",
+    "seconds": 3646
+  },
+  {
+    "stream_id": "S046",
+    "track_no": 819,
+    "song_title": "檄！帝国華撃団",
+    "artist": "真宮寺さくら（横山智佐）＆帝国歌劇団",
+    "timestamp": "01:10:33",
+    "seconds": 4233
+  },
+  {
+    "stream_id": "S046",
+    "track_no": 820,
+    "song_title": "only my railgun",
+    "artist": "fripSide",
+    "timestamp": "01:19:49",
+    "seconds": 4789
+  },
+  {
+    "stream_id": "S046",
+    "track_no": 821,
+    "song_title": "Over Soul",
+    "artist": "林原めぐみ",
+    "timestamp": "01:26:18",
+    "seconds": 5178
+  },
+  {
+    "stream_id": "S046",
+    "track_no": 822,
+    "song_title": "ライオン",
+    "artist": "May'n/中島愛",
+    "timestamp": "01:33:36",
+    "seconds": 5616
+  },
+  {
+    "stream_id": "S046",
+    "track_no": 823,
+    "song_title": "翔べ!ガンダム",
+    "artist": "池田鴻",
+    "timestamp": "01:41:46",
+    "seconds": 6106
+  },
+  {
+    "stream_id": "S046",
+    "track_no": 824,
+    "song_title": "Go Tight!",
+    "artist": "AKINO",
+    "timestamp": "01:47:30",
+    "seconds": 6450
+  },
+  {
+    "stream_id": "S046",
+    "track_no": 825,
+    "song_title": "アイドル",
+    "artist": "YOASOBI",
+    "timestamp": "01:54:36",
+    "seconds": 6876
+  },
+  {
+    "stream_id": "S046",
+    "track_no": 826,
+    "song_title": "R.I.P.",
+    "artist": "ReoNa",
+    "timestamp": "02:11:13",
+    "seconds": 7873
+  },
+  {
+    "stream_id": "S046",
+    "track_no": 827,
+    "song_title": "残酷な夜に輝け",
+    "artist": "LiSA",
+    "timestamp": "02:18:35",
+    "seconds": 8315
+  },
+  {
+    "stream_id": "S046",
+    "track_no": 828,
+    "song_title": "残酷な天使のテーゼ",
+    "artist": "高橋洋子",
+    "timestamp": "02:28:00",
+    "seconds": 8880
   }
 ]
