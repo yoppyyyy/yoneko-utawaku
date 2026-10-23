@@ -11,9 +11,65 @@ let recommendPicks = [];
 // ============================================================
 // Utilities
 // ============================================================
-function extractVideoId(url) {
-  const match = url.match(/[?&]v=([^&]+)/) || url.match(/youtu\.be\/([^?&]+)/);
-  return match ? match[1] : '';
+function extractVideoId(value) {
+  try {
+    const url = new URL(value);
+    if (url.protocol !== 'https:' || url.username || url.password || url.port) return '';
+    let id = '';
+    if (url.hostname === 'youtu.be') {
+      id = url.pathname.slice(1);
+    } else if (['youtube.com', 'www.youtube.com', 'm.youtube.com', 'music.youtube.com'].includes(url.hostname)) {
+      if (url.pathname === '/watch') id = url.searchParams.get('v') || '';
+      else id = url.pathname.match(/^\/(?:live|shorts|embed)\/([^/]+)$/)?.[1] || '';
+    }
+    return /^[A-Za-z0-9_-]{11}$/.test(id) ? id : '';
+  } catch {
+    return '';
+  }
+}
+
+function buildPlaybackUrl(value, seconds) {
+  const id = extractVideoId(value);
+  if (!id || typeof seconds !== 'number' || !Number.isSafeInteger(seconds) || seconds < 0) return '';
+  const url = new URL('https://www.youtube.com/watch');
+  url.searchParams.set('v', id);
+  url.searchParams.set('t', String(seconds));
+  return url.href;
+}
+
+function element(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = String(text ?? '');
+  return node;
+}
+
+function playButton(url, seconds) {
+  const button = element('button', 'play-btn', '▶');
+  button.type = 'button';
+  const href = buildPlaybackUrl(url, seconds);
+  button.disabled = !href;
+  button.title = href ? 'この曲から再生' : '再生URLまたは時刻が不正です';
+  button.addEventListener('click', event => {
+    event.stopPropagation();
+    if (href) window.open(href, '_blank', 'noopener,noreferrer');
+  });
+  return button;
+}
+
+function thumbnail(url, className) {
+  const img = element('img', className);
+  img.alt = '';
+  const id = extractVideoId(url);
+  const fallback = () => {
+    img.removeAttribute('src');
+    img.style.background = 'linear-gradient(135deg, var(--primary-900), var(--accent-700))';
+    img.style.aspectRatio = '16 / 9';
+  };
+  img.addEventListener('error', fallback, { once: true });
+  if (id) img.src = `https://img.youtube.com/vi/${id}/mqdefault.jpg`;
+  else fallback();
+  return img;
 }
 
 function formatTimestamp(seconds) {
@@ -33,12 +89,12 @@ function formatDate(dateStr) {
 // Data Processing
 // ============================================================
 function buildSongIndex(streams, setlists) {
-  const map = {};
-  const streamsMap = {};
+  const map = Object.create(null);
+  const streamsMap = Object.create(null);
   streams.forEach(s => { streamsMap[s.stream_id] = s; });
 
   setlists.forEach(item => {
-    const key = `${item.song_title}___${item.artist}`;
+    const key = JSON.stringify([item.song_title, item.artist]);
     if (!map[key]) {
       map[key] = {
         song_title: item.song_title,
@@ -90,61 +146,34 @@ function sortStreams(list, key) {
 
 function renderStreams() {
   const grid = document.getElementById('streamsGrid');
-  const sorted = sortStreams(streams, currentStreamSort);
-
-  grid.innerHTML = sorted.map(stream => {
-    const videoId = stream.video_id || extractVideoId(stream.youtube_url || '');
-    const streamSetlist = setlists
-      .filter(s => s.stream_id === stream.stream_id)
-      .sort((a, b) => a.track_no - b.track_no);
-    const songCount = streamSetlist.length;
-
-    const setlistHtml = streamSetlist.map(item => `
-      <div class="setlist-item">
-        <div class="setlist-song">
-          <div class="setlist-song-title">${item.song_title}</div>
-          <div class="setlist-artist">${item.artist}</div>
-        </div>
-        <span class="setlist-time">${item.timestamp}</span>
-        <button class="play-btn" title="この曲から再生"
-                onclick="event.stopPropagation(); window.open('${stream.youtube_url}&t=${item.seconds}', '_blank')">▶</button>
-      </div>
-    `).join('');
-
-    return `
-      <div class="stream-card" onclick="toggleSetlist(this)">
-        <div class="stream-thumbnail-wrapper">
-          <img class="stream-thumbnail"
-               src="https://img.youtube.com/vi/${videoId}/mqdefault.jpg"
-               alt=""
-               onerror="this.style.background='linear-gradient(135deg, var(--primary-900), var(--accent-700))'; this.style.height='180px'; this.src='';">
-          <span class="stream-badge">${songCount}曲</span>
-        </div>
-        <div class="stream-info">
-          <div class="stream-date">${formatDate(stream.date)}</div>
-          <div class="stream-title">${stream.title}</div>
-          <div class="stream-song-count">${songCount}曲</div>
-        </div>
-        <div class="setlist">
-          <div class="setlist-inner">
-            ${setlistHtml}
-          </div>
-        </div>
-      </div>
-    `;
-  }).join('');
-}
-
-function toggleSetlist(card) {
-  if (event.target.closest('.play-btn')) return;
-  card.classList.toggle('expanded');
+  grid.replaceChildren(...sortStreams(streams, currentStreamSort).map(stream => {
+    const items = setlists.filter(s => s.stream_id === stream.stream_id).sort((a, b) => a.track_no - b.track_no);
+    const card = element('div', 'stream-card');
+    card.addEventListener('click', () => card.classList.toggle('expanded'));
+    const wrapper = element('div', 'stream-thumbnail-wrapper');
+    wrapper.append(thumbnail(stream.youtube_url, 'stream-thumbnail'), element('span', 'stream-badge', `${items.length}曲`));
+    const info = element('div', 'stream-info');
+    info.append(element('div', 'stream-date', formatDate(stream.date)), element('div', 'stream-title', stream.title), element('div', 'stream-song-count', `${items.length}曲`));
+    const list = element('div', 'setlist');
+    const inner = element('div', 'setlist-inner');
+    items.forEach(item => {
+      const row = element('div', 'setlist-item');
+      const song = element('div', 'setlist-song');
+      song.append(element('div', 'setlist-song-title', item.song_title), element('div', 'setlist-artist', item.artist));
+      row.append(song, element('span', 'setlist-time', item.timestamp), playButton(stream.youtube_url, item.seconds));
+      inner.append(row);
+    });
+    list.append(inner);
+    card.append(wrapper, info, list);
+    return card;
+  }));
 }
 
 // ============================================================
 // Rendering — Recommend (C-9)
 // ============================================================
 function pickRecommendations(n = 3) {
-  const streamsMap = {};
+  const streamsMap = Object.create(null);
   streams.forEach(s => { streamsMap[s.stream_id] = s; });
 
   const pool = setlists
@@ -166,7 +195,7 @@ function pickRecommendations(n = 3) {
   const seen = new Set();
   const unique = [];
   for (const item of pool) {
-    const key = `${item.song_title}___${item.artist}`;
+    const key = JSON.stringify([item.song_title, item.artist]);
     if (!seen.has(key)) {
       seen.add(key);
       unique.push(item);
@@ -184,65 +213,51 @@ function renderRecommend() {
   const grid = document.getElementById('recommendGrid');
   if (!grid) return;
   if (!recommendPicks.length) {
-    grid.innerHTML = '<div style="color:var(--neutral-600);text-align:center;padding:40px;">おすすめできる曲がありません</div>';
+    grid.replaceChildren(element('div', 'recommend-lead', 'おすすめできる曲がありません'));
     return;
   }
-
-  grid.innerHTML = recommendPicks.map(item => `
-    <div class="recommend-card">
-      <div class="recommend-thumb-wrapper">
-        <img class="recommend-thumbnail"
-             src="https://img.youtube.com/vi/${item.video_id}/mqdefault.jpg"
-             alt=""
-             onerror="this.style.background='linear-gradient(135deg, var(--primary-900), var(--accent-700))'; this.src='';">
-      </div>
-      <div class="recommend-info">
-        <div class="recommend-text">
-          <div class="recommend-song-title">${item.song_title}</div>
-          <div class="recommend-artist">${item.artist}</div>
-        </div>
-        <button class="play-btn" title="この曲から再生"
-                onclick="window.open('${item.youtube_url}&t=${item.seconds}', '_blank')">▶</button>
-      </div>
-    </div>
-  `).join('');
+  grid.replaceChildren(...recommendPicks.map(item => {
+    const card = element('div', 'recommend-card');
+    const wrapper = element('div', 'recommend-thumb-wrapper');
+    wrapper.append(thumbnail(item.youtube_url, 'recommend-thumbnail'));
+    const info = element('div', 'recommend-info');
+    const text = element('div', 'recommend-text');
+    text.append(element('div', 'recommend-song-title', item.song_title), element('div', 'recommend-artist', item.artist));
+    info.append(text, playButton(item.youtube_url, item.seconds));
+    card.append(wrapper, info);
+    return card;
+  }));
 }
 
 // ============================================================
 // Rendering — Songs (C-7)
 // ============================================================
 function renderSongs() {
-  const sorted = sortSongIndex(songIndex, currentSort);
-  const tbody = document.getElementById('songsBody');
-
-  tbody.innerHTML = sorted.map(song => {
-    const appearancesHtml = song.appearances.map(a => `
-      <div class="appearance-item">
-        <span class="appearance-date">${formatDate(a.date)}</span>
-        <span class="appearance-stream">${a.title}</span>
-        <span class="appearance-time">${a.timestamp}</span>
-        <button class="play-btn" title="この曲から再生"
-                onclick="event.stopPropagation(); window.open('${a.youtube_url}&t=${a.seconds}', '_blank')">▶</button>
-      </div>
-    `).join('');
-
-    return `
-      <tr onclick="toggleSongDetail(this)">
-        <td><span class="song-name">${song.song_title}</span></td>
-        <td><span class="song-artist-cell">${song.artist}</span></td>
-        <td><span class="song-count">♪ ${song.count}回</span></td>
-        <td><span class="song-last-date">${formatDate(song.latest_date)}</span></td>
-      </tr>
-      <tr class="song-detail-row" style="display:none;">
-        <td colspan="4">
-          <div class="song-appearances">
-            <h4>歌唱された配信</h4>
-            ${appearancesHtml}
-          </div>
-        </td>
-      </tr>
-    `;
-  }).join('');
+  const rows = [];
+  sortSongIndex(songIndex, currentSort).forEach(song => {
+    const row = element('tr');
+    for (const [className, text] of [['song-name', song.song_title], ['song-artist-cell', song.artist], ['song-count', `♪ ${song.count}回`], ['song-last-date', formatDate(song.latest_date)]]) {
+      const cell = element('td');
+      cell.append(element('span', className, text));
+      row.append(cell);
+    }
+    const detail = element('tr', 'song-detail-row');
+    detail.style.display = 'none';
+    row.addEventListener('click', () => { detail.style.display = detail.style.display === 'none' ? '' : 'none'; });
+    const cell = element('td');
+    cell.colSpan = 4;
+    const appearances = element('div', 'song-appearances');
+    appearances.append(element('h4', '', '歌唱された配信'));
+    song.appearances.forEach(a => {
+      const item = element('div', 'appearance-item');
+      item.append(element('span', 'appearance-date', formatDate(a.date)), element('span', 'appearance-stream', a.title), element('span', 'appearance-time', a.timestamp), playButton(a.youtube_url, a.seconds));
+      appearances.append(item);
+    });
+    cell.append(appearances);
+    detail.append(cell);
+    rows.push(row, detail);
+  });
+  document.getElementById('songsBody').replaceChildren(...rows);
 }
 
 function sortSongIndex(index, key) {
@@ -265,6 +280,7 @@ function handleSort(key) {
     btn.classList.toggle('active', btn.dataset.sort === key);
   });
   renderSongs();
+  handleSearch(document.getElementById('searchInput').value);
 }
 
 function handleStreamSort(key) {
@@ -274,14 +290,6 @@ function handleStreamSort(key) {
   });
   renderStreams();
   handleSearch(document.getElementById('searchInput').value);
-}
-
-function toggleSongDetail(row) {
-  if (event.target.closest('.play-btn')) return;
-  const detailRow = row.nextElementSibling;
-  if (detailRow && detailRow.classList.contains('song-detail-row')) {
-    detailRow.style.display = detailRow.style.display === 'none' ? '' : 'none';
-  }
 }
 
 // ============================================================

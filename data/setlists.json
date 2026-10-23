@@ -1475,7 +1475,7 @@
     "stream_id": "S010",
     "track_no": 185,
     "song_title": "謎",
-    "artist": "林原めぐみ",
+    "artist": "小松未歩",
     "timestamp": "03:30:18",
     "seconds": 12618
   },
@@ -6622,5 +6622,213 @@
     "artist": "高橋洋子",
     "timestamp": "02:28:00",
     "seconds": 8880
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 829,
+    "song_title": "プラチナ",
+    "artist": "坂本真綾",
+    "timestamp": "00:17:59",
+    "seconds": 1079
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 830,
+    "song_title": "マイ フレンド",
+    "artist": "ZARD",
+    "timestamp": "00:26:09",
+    "seconds": 1569
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 831,
+    "song_title": "煌めく瞬間に捕われて",
+    "artist": "MANISH",
+    "timestamp": "00:33:14",
+    "seconds": 1994
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 832,
+    "song_title": "世界が終るまでは…",
+    "artist": "WANDS",
+    "timestamp": "00:38:30",
+    "seconds": 2310
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 833,
+    "song_title": "輪舞-revolution-",
+    "artist": "奥井雅美",
+    "timestamp": "00:47:40",
+    "seconds": 2860
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 834,
+    "song_title": "嵐の中で輝いて",
+    "artist": "米倉千尋",
+    "timestamp": "00:57:58",
+    "seconds": 3478
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 835,
+    "song_title": "WILL",
+    "artist": "米倉千尋",
+    "timestamp": "01:10:05",
+    "seconds": 4205
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 836,
+    "song_title": "約束の場所へ",
+    "artist": "米倉千尋",
+    "timestamp": "01:16:39",
+    "seconds": 4599
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 837,
+    "song_title": "Butterfly Kiss",
+    "artist": "米倉千尋",
+    "timestamp": "01:22:00",
+    "seconds": 4920
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 838,
+    "song_title": "そばかす",
+    "artist": "JUDY AND MARY",
+    "timestamp": "01:39:31",
+    "seconds": 5971
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 839,
+    "song_title": "ゆずれない願い",
+    "artist": "田村直美",
+    "timestamp": "01:49:47",
+    "seconds": 6587
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 840,
+    "song_title": "いとおしい人のために",
+    "artist": "佐藤朱美",
+    "timestamp": "01:57:42",
+    "seconds": 7062
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 841,
+    "song_title": "微笑みの爆弾",
+    "artist": "馬渡松子",
+    "timestamp": "02:07:48",
+    "seconds": 7668
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 842,
+    "song_title": "アンバランスなKissをして",
+    "artist": "高橋ひろ",
+    "timestamp": "02:11:37",
+    "seconds": 7897
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 843,
+    "song_title": "ペガサス幻想",
+    "artist": "MAKE-UP",
+    "timestamp": "02:17:00",
+    "seconds": 8220
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 844,
+    "song_title": "謎",
+    "artist": "小松未歩",
+    "timestamp": "02:27:48",
+    "seconds": 8868
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 845,
+    "song_title": "乙女のポリシー",
+    "artist": "石田 燿子",
+    "timestamp": "02:34:00",
+    "seconds": 9240
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 846,
+    "song_title": "創聖のアクエリオン",
+    "artist": "AKINO",
+    "timestamp": "02:47:57",
+    "seconds": 10077
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 847,
+    "song_title": "Go Tight!",
+    "artist": "AKINO",
+    "timestamp": "02:54:25",
+    "seconds": 10465
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 848,
+    "song_title": "only my railgun",
+    "artist": "fripSide",
+    "timestamp": "03:05:07",
+    "seconds": 11107
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 849,
+    "song_title": "future",
+    "artist": "HIRO-X",
+    "timestamp": "03:11:40",
+    "seconds": 11500
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 850,
+    "song_title": "My self",
+    "artist": "Changin' My Life",
+    "timestamp": "03:23:33",
+    "seconds": 12213
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 851,
+    "song_title": "Get Over",
+    "artist": "Dream",
+    "timestamp": "03:33:11",
+    "seconds": 12791
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 852,
+    "song_title": "Grip!",
+    "artist": "Every Little Thing",
+    "timestamp": "03:41:02",
+    "seconds": 13262
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 853,
+    "song_title": "Over Soul",
+    "artist": "林原めぐみ",
+    "timestamp": "03:51:47",
+    "seconds": 13907
+  },
+  {
+    "stream_id": "S047",
+    "track_no": 854,
+    "song_title": "FIND THE WAY",
+    "artist": "中島美嘉",
+    "timestamp": "03:56:20",
+    "seconds": 14180
   }
 ]
